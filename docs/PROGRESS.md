@@ -2,6 +2,35 @@
 
 > Append-only. Newest entries at the top.
 
+## 2026-05-19 — Nav simplification + Help Desk + AI Assistant FAB
+**Project relocated:** Working directory moved from `~/Desktop/swcs-website/` to `~/Documents/GitHub/SWSC-Website/` (now git-tracked at `anjaligautam-svg/SWSC-Website`).
+
+**Built:**
+- Replaced placeholder "S" brand mark with the actual Naveen Nagpur logo (`assets/images/naveen-nagpur-logo.png`, pulled from the original deployed site)
+- Replaced "NMRDA / Naveen Nagpur IBFC" wordmark layout with "NMRDA / Single Window Clearance System" to match the original
+- Nav reduced from 5 menu items + 2 CTAs to: **About · Help Desk · Login** (single primary CTA)
+- Existing Problem section repurposed under `id="about"` as the About anchor
+- **New Help Desk section** (`#help-desk`, `css/sections/help.css`) — 3 contact cards (Application support, Talk to officer, Raise grievance) + a full-width "Open assistant" invite card linking to the FAB
+- **FAB AI Assistant** (`css/sections/fab.css`, `js/modules/fab.js`):
+  - Floating ink-coloured button bottom-right with flame pulse halo
+  - Expanding panel matching the supplied design exactly — deep navy header, bot avatar, status strip, message thread, suggestion chips, input row with send button
+  - Canned responses for the 4 suggestion chips (How do I register / What approvals / How long / How to track)
+  - Generic fallback response for free-form input
+  - Reset + Close + ESC handlers wired
+  - Reduced-motion aware
+  - Mobile: fills the viewport
+
+**Behaviour notes:**
+- All sections retained — the user's "single page site" requirement is satisfied by all content existing on one scrollable page, with the nav simplified to two anchors
+- The `data-fab-open` attribute makes the assistant openable from anywhere on the page (used by the Help Desk invite card)
+- Local dev server still on `http://localhost:5500/` from `~/Documents/GitHub/SWSC-Website/`
+
+**Open / awaiting:**
+1. User review of FAB + Help Desk in the browser
+2. Real NMRDA phone number + support email (currently placeholders)
+3. Whether the assistant should hit a real backend or stay canned for v1
+4. Whether the existing rich sections (modules grid, scale band, audience cards) should be kept or simplified further
+
 ## 2026-05-18 — First draft shipped
 **Built:**
 - 11 sections, end to end: nav, hero, integrations trust strip, problem, two-journeys, how-it-works (4 steps), platform modules (12 cards), the-hub scale band, audience, final CTA, footer

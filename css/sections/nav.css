@@ -4,28 +4,27 @@
   position: fixed;
   inset: 0 0 auto 0;
   z-index: 50;
-  padding: var(--s-5) 0;
-  transition: background var(--dur-base) var(--ease-ui),
-              border-color var(--dur-base) var(--ease-ui),
-              padding var(--dur-base) var(--ease-ui),
-              backdrop-filter var(--dur-base) var(--ease-ui);
-  border-bottom: 1px solid transparent;
+  padding: var(--s-3) 0;
+  background: #ffffff;
+  border-bottom: 1px solid var(--rule);
+  transition: padding var(--dur-base) var(--ease-ui),
+              box-shadow var(--dur-base) var(--ease-ui);
 }
 .nav.is-scrolled {
-  background: rgba(251, 248, 242, 0.78);
-  backdrop-filter: saturate(140%) blur(14px);
-  -webkit-backdrop-filter: saturate(140%) blur(14px);
-  border-bottom-color: var(--rule);
-  padding: var(--s-3) 0;
+  padding: var(--s-2) 0;
+  box-shadow: 0 2px 12px rgba(5, 12, 54, 0.04);
 }
 
 .nav__inner {
   display: flex;
   align-items: center;
-  justify-content: space-between;
-  gap: var(--s-6);
+  gap: var(--s-5);
 }
 
+/* Brand stays left; everything else clusters to the right */
+.nav__inner .brand { margin-right: auto; }
+
+/* Brand — image + two-line wordmark */
 .brand {
   display: flex;
   align-items: center;
@@ -33,32 +32,36 @@
   text-decoration: none;
   color: var(--ink);
 }
-.brand__mark {
-  width: 36px; height: 36px;
-  display: grid; place-items: center;
-  background: var(--ink);
-  color: var(--paper);
-  border-radius: 8px;
-  font-family: var(--font-display);
-  font-size: 1.125rem;
-  line-height: 1;
-  letter-spacing: -0.02em;
+/* Naveen Nagpur logo — image, square aspect */
+.brand__logo {
+  width: 72px;
+  height: 72px;
+  display: block;
+  object-fit: contain;
+  flex-shrink: 0;
 }
-.brand__text { display: flex; flex-direction: column; line-height: 1.05; }
+.brand__text {
+  display: flex;
+  flex-direction: column;
+  line-height: 1.15;
+  border-left: 1px solid var(--rule);
+  padding-left: var(--s-3);
+}
 .brand__name {
   font-family: var(--font-sans);
   font-weight: 600;
-  font-size: 0.9375rem;
-  letter-spacing: -0.005em;
+  font-size: 0.875rem;
+  letter-spacing: 0.04em;
+  color: var(--ink);
 }
 .brand__sub {
   font-family: var(--font-sans);
-  font-size: 0.6875rem;
-  color: var(--ink-50);
-  letter-spacing: 0.08em;
-  text-transform: uppercase;
+  font-size: 0.75rem;
+  color: var(--ink);
+  letter-spacing: 0.01em;
 }
 
+/* Center menu — minimal, two items */
 .nav__menu {
   display: flex;
   align-items: center;
@@ -67,10 +70,11 @@
 .nav__link {
   font-size: 0.9375rem;
   color: var(--ink);
-  padding: 8px 14px;
+  padding: 8px 16px;
   border-radius: var(--r-pill);
   text-decoration: none;
-  transition: background var(--dur-fast) var(--ease-ui);
+  transition: background var(--dur-fast) var(--ease-ui), color var(--dur-fast) var(--ease-ui);
+  font-weight: 500;
 }
 .nav__link:hover { background: var(--ink-06); }
 
@@ -86,7 +90,9 @@
   justify-content: center;
 }
 
-@media (max-width: 960px) {
-  .nav__menu, .nav__actions .btn--ghost { display: none; }
+@media (max-width: 760px) {
+  .nav__menu { display: none; }
   .nav__toggle { display: inline-flex; }
+  .brand__text { display: none; }
+  .brand__logo { width: 56px; height: 56px; }
 }
