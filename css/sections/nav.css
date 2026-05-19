@@ -1,0 +1,92 @@
+/* Top navigation — transparent over hero, becomes solid on scroll */
+
+.nav {
+  position: fixed;
+  inset: 0 0 auto 0;
+  z-index: 50;
+  padding: var(--s-5) 0;
+  transition: background var(--dur-base) var(--ease-ui),
+              border-color var(--dur-base) var(--ease-ui),
+              padding var(--dur-base) var(--ease-ui),
+              backdrop-filter var(--dur-base) var(--ease-ui);
+  border-bottom: 1px solid transparent;
+}
+.nav.is-scrolled {
+  background: rgba(251, 248, 242, 0.78);
+  backdrop-filter: saturate(140%) blur(14px);
+  -webkit-backdrop-filter: saturate(140%) blur(14px);
+  border-bottom-color: var(--rule);
+  padding: var(--s-3) 0;
+}
+
+.nav__inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--s-6);
+}
+
+.brand {
+  display: flex;
+  align-items: center;
+  gap: var(--s-3);
+  text-decoration: none;
+  color: var(--ink);
+}
+.brand__mark {
+  width: 36px; height: 36px;
+  display: grid; place-items: center;
+  background: var(--ink);
+  color: var(--paper);
+  border-radius: 8px;
+  font-family: var(--font-display);
+  font-size: 1.125rem;
+  line-height: 1;
+  letter-spacing: -0.02em;
+}
+.brand__text { display: flex; flex-direction: column; line-height: 1.05; }
+.brand__name {
+  font-family: var(--font-sans);
+  font-weight: 600;
+  font-size: 0.9375rem;
+  letter-spacing: -0.005em;
+}
+.brand__sub {
+  font-family: var(--font-sans);
+  font-size: 0.6875rem;
+  color: var(--ink-50);
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.nav__menu {
+  display: flex;
+  align-items: center;
+  gap: var(--s-2);
+}
+.nav__link {
+  font-size: 0.9375rem;
+  color: var(--ink);
+  padding: 8px 14px;
+  border-radius: var(--r-pill);
+  text-decoration: none;
+  transition: background var(--dur-fast) var(--ease-ui);
+}
+.nav__link:hover { background: var(--ink-06); }
+
+.nav__actions { display: flex; align-items: center; gap: var(--s-3); }
+
+.nav__toggle {
+  display: none;
+  width: 44px; height: 44px;
+  border-radius: var(--r-pill);
+  background: var(--ink);
+  color: var(--paper);
+  align-items: center;
+  justify-content: center;
+}
+
+@media (max-width: 960px) {
+  .nav__menu, .nav__actions .btn--ghost { display: none; }
+  .nav__toggle { display: inline-flex; }
+}

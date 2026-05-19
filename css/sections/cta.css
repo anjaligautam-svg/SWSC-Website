@@ -1,0 +1,51 @@
+/* Final CTA — paper-warm band, oversized editorial headline + single primary action */
+
+.final-cta {
+  background: var(--paper-warm);
+  padding-block: clamp(96px, 12vw, 160px);
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+}
+.final-cta::before {
+  content: "";
+  position: absolute; inset: auto 0 -40% 0;
+  height: 80%;
+  background: radial-gradient(60% 60% at 50% 100%, rgba(235, 71, 12, 0.10), transparent 70%);
+  pointer-events: none;
+}
+
+.final-cta__inner { position: relative; max-width: 880px; margin-inline: auto; }
+
+.final-cta .eyebrow {
+  justify-content: center;
+  margin-bottom: var(--s-5);
+}
+.final-cta .eyebrow::before { display: none; }
+
+.final-cta h2 {
+  font-size: var(--fs-3xl);
+  line-height: 1;
+  letter-spacing: -0.025em;
+}
+.final-cta h2 em { font-style: italic; color: var(--flame); }
+
+.final-cta p {
+  margin: var(--s-6) auto 0;
+  font-size: var(--fs-md);
+  color: var(--ink-70);
+  max-width: 58ch;
+}
+
+.final-cta__actions {
+  margin-top: var(--s-10);
+  display: flex; justify-content: center; gap: var(--s-3); flex-wrap: wrap;
+}
+
+.final-cta__meta {
+  margin-top: var(--s-8);
+  font-size: var(--fs-xs);
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--ink-50);
+}
