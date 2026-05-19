@@ -9,7 +9,7 @@
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Instrument+Serif:ital@0;1&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Instrument+Serif:ital@0;1&family=Poppins:wght@500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
 
   <link rel="stylesheet" href="css/reset.css" />
   <link rel="stylesheet" href="css/variables.css" />
@@ -62,64 +62,120 @@
 
 <!-- ============================== HERO ============================== -->
 <section class="hero">
-  <div class="container hero__inner">
-    <div class="hero__left">
-      <p class="eyebrow hero__eyebrow reveal">NMRDA · Naveen Nagpur IBFC</p>
+  <div class="container">
+    <div class="hero__stage">
 
-      <h1 class="hero__title reveal" data-delay="1">
-        One application.<br>
-        Every approval. <em>One window.</em>
-      </h1>
+      <!-- Bottom-center scroll cue — mouse silhouette with animated wheel + label -->
+      <a href="#about" class="hero__scroll" aria-label="Scroll to About section">
+        <span class="hero__scroll-mouse" aria-hidden="true">
+          <span class="hero__scroll-wheel"></span>
+        </span>
+        <span class="hero__scroll-label">Scroll</span>
+      </a>
 
-      <p class="hero__lede reveal" data-delay="2">
-        The Single Window Clearance System consolidates 15+ government departments,
-        10 sectors, and every operational approval needed to launch a business at the
-        Naveen Nagpur International Business and Finance Hub — into a single, investor-grade portal.
-      </p>
+      <!-- Full-bleed image gallery is the stage backdrop -->
+      <div class="hero__gallery-wrap reveal">
+        <div class="hero__gallery" data-hero-gallery role="region" aria-label="Naveen Nagpur in motion">
+          <div class="gallery-item">
+            <img src="assets/images/hero/hero-c.jpg" alt="Analyst at a multi-monitor workstation" loading="lazy" />
+            <div class="gallery-item__caption"><span class="num">01 · IT &amp; ITeS</span><span class="lbl">Decisions, in real time.</span></div>
+          </div>
+          <div class="gallery-item">
+            <img src="assets/images/hero/hero-a.jpg" alt="Indian manufacturing plant — Make in India" loading="lazy" />
+            <div class="gallery-item__caption"><span class="num">02 · MANUFACTURING</span><span class="lbl">Made in India, by design.</span></div>
+          </div>
+          <div class="gallery-item is-active">
+            <img src="assets/images/hero/hero-e.jpg" alt="Naveen Nagpur master rendering — central avenue with greenery and high-rises" loading="eager" />
+            <div class="gallery-item__caption"><span class="num">03 · THE VISION</span><span class="lbl">Naveen Nagpur, on plan.</span></div>
+          </div>
+          <div class="gallery-item">
+            <img src="assets/images/hero/hero-b.jpg" alt="Financial district skyline at sunrise" loading="lazy" />
+            <div class="gallery-item__caption"><span class="num">04 · FINANCE</span><span class="lbl">A financial district at dawn.</span></div>
+          </div>
+          <div class="gallery-item">
+            <img src="assets/images/hero/hero-d.jpg" alt="Team collaborating in a modern Indian office" loading="lazy" />
+            <div class="gallery-item__caption"><span class="num">05 · ENTERPRISE</span><span class="lbl">Built for working teams.</span></div>
+          </div>
+        </div>
+      </div>
 
-      <div class="hero__cta reveal" data-delay="3">
-        <a class="btn btn--primary" href="#register">
-          Start your application
-          <svg class="arrow" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M5 12h14M13 5l7 7-7 7"/></svg>
+      <!-- LEFT overlay: frosted-glass hero copy + CTAs -->
+      <article class="hero__glass glass-surface reveal" data-delay="1">
+        <p class="hero__glass-eyebrow">NMRDA &middot; Naveen Nagpur IBFC</p>
+        <h1>
+          All Business Approvals for <em>Naveen Nagpur</em> in One Place
+        </h1>
+        <p class="hero__glass-lede">
+          NMRDA's Single Window Clearance System is the official digital platform for all business approvals, NOCs, building permissions, and licences for the Naveen Nagpur International Business and Finance Centre &mdash; spanning 692 hectares in Nagpur, Maharashtra.
+        </p>
+
+        <div class="hero__glass-cta">
+          <a class="btn btn--primary" href="#login" aria-label="Login or register">
+            <svg class="btn-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+              <path d="M15 3h4a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2h-4"/>
+              <polyline points="10 17 15 12 10 7"/>
+              <line x1="15" y1="12" x2="3" y2="12"/>
+            </svg>
+            Login &amp; Register
+          </a>
+          <a class="btn btn--ghost" href="#approvals" aria-label="Identify required approvals">
+            <svg class="btn-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+              <path d="m3 17 2 2 4-4"/>
+              <path d="m3 7 2 2 4-4"/>
+              <path d="M13 6h8M13 12h8M13 18h8"/>
+            </svg>
+            Identify Required Approvals
+          </a>
+        </div>
+      </article>
+
+      <!-- RIGHT overlay: 3 quick-action cards, same glass material -->
+      <div class="hero__actions reveal" data-delay="2">
+        <a class="quick-action glass-surface" href="#about" data-idx="01">
+          <span class="quick-action__icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+              <line x1="3" y1="22" x2="21" y2="22"/>
+              <line x1="6" y1="18" x2="6" y2="11"/>
+              <line x1="10" y1="18" x2="10" y2="11"/>
+              <line x1="14" y1="18" x2="14" y2="11"/>
+              <line x1="18" y1="18" x2="18" y2="11"/>
+              <polygon points="12 2 20 7 4 7"/>
+            </svg>
+          </span>
+          <span class="quick-action__title">About <em>Naveen Nagpur</em></span>
+          <span class="quick-action__arrow" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 17L17 7M17 7H8M17 7v9"/></svg>
+          </span>
         </a>
-        <a class="btn btn--ghost" href="#process">See how it works</a>
-        <span class="hero__cta-meta"><span class="dot"></span> Platform live · 200+ applicants onboarded</span>
+        <a class="quick-action glass-surface" href="#scale" data-idx="02">
+          <span class="quick-action__icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+              <polyline points="22 7 13.5 15.5 8.5 10.5 2 17"/>
+              <polyline points="16 7 22 7 22 13"/>
+            </svg>
+          </span>
+          <span class="quick-action__title">Why <em>invest here</em></span>
+          <span class="quick-action__arrow" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 17L17 7M17 7H8M17 7v9"/></svg>
+          </span>
+        </a>
+        <a class="quick-action glass-surface" href="#process" data-idx="03">
+          <span class="quick-action__icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+              <circle cx="6" cy="19" r="3"/>
+              <path d="M9 19h8.5a3.5 3.5 0 0 0 0-7h-11a3.5 3.5 0 0 1 0-7H15"/>
+              <circle cx="18" cy="5" r="3"/>
+            </svg>
+          </span>
+          <span class="quick-action__title">How to <em>invest</em></span>
+          <span class="quick-action__arrow" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 17L17 7M17 7H8M17 7v9"/></svg>
+          </span>
+        </a>
       </div>
+
     </div>
-
-    <aside class="hero__panel reveal" data-delay="2" aria-label="Platform snapshot">
-      <div class="hero__panel-head">
-        <span class="hero__panel-title">Platform snapshot</span>
-        <span class="hero__panel-tick">v1.0 · UAT</span>
-      </div>
-
-      <div class="hero__stats">
-        <div class="hero__stat">
-          <span class="num">40<small>–60%</small></span>
-          <span class="lbl">Target reduction in end-to-end approval cycles</span>
-        </div>
-        <div class="hero__stat">
-          <span class="num">15<small>+</small></span>
-          <span class="lbl">Government departments consolidated into one flow</span>
-        </div>
-        <div class="hero__stat">
-          <span class="num">10</span>
-          <span class="lbl">Sectors covered by the live approval matrix</span>
-        </div>
-        <div class="hero__stat">
-          <span class="num">4</span>
-          <span class="lbl">Portals — Investor, CA/CS, Admin, Officer</span>
-        </div>
-      </div>
-
-      <div class="hero__panel-foot">
-        <span>SLA-tracked · Deemed approvals · Audit-grade</span>
-        <strong>99.5% uptime</strong>
-      </div>
-    </aside>
   </div>
-
-  <div class="hero__cue" aria-hidden="true">Scroll</div>
 </section>
 
 <!-- ============================== TRUST STRIP ============================== -->
