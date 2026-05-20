@@ -1,0 +1,250 @@
+/* About Naveen Nagpur — 2-column: image carousel (left) + content with stat grid (right).
+   Carousel is a vanilla port of the shadcn/embla "Gallery4" pattern:
+   draggable, snap-scrolling, arrows + dot pagination, hover-zoom. */
+
+#about {
+  scroll-margin-top: 90px;
+  padding-block: clamp(44px, 5vw, 76px);
+}
+
+.ibfc__grid {
+  display: grid;
+  grid-template-columns: minmax(0, 0.92fr) minmax(0, 1fr);
+  gap: clamp(32px, 4.5vw, 72px);
+  align-items: center;
+}
+
+/* ============================================================
+   LEFT: image carousel
+   ============================================================ */
+.ibfc-carousel {
+  display: flex;
+  flex-direction: column;
+  gap: var(--s-5);
+}
+
+.ibfc-carousel__viewport {
+  position: relative;
+  overflow: hidden;
+  border-radius: var(--r-xl);
+  box-shadow: var(--shadow-lg);
+  aspect-ratio: 1 / 1;
+  cursor: grab;
+  touch-action: pan-y;
+  background: var(--ink);
+}
+.ibfc-carousel__viewport.is-dragging { cursor: grabbing; }
+
+.ibfc-carousel__track {
+  display: flex;
+  height: 100%;
+  will-change: transform;
+}
+
+.ibfc-slide {
+  position: relative;
+  flex: 0 0 100%;
+  height: 100%;
+  overflow: hidden;
+}
+.ibfc-slide img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  transition: transform 700ms var(--ease-settle);
+  -webkit-user-drag: none;
+  user-select: none;
+}
+.ibfc-carousel__viewport:hover .ibfc-slide img { transform: scale(1.045); }
+
+.ibfc-slide::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    to bottom,
+    rgba(5, 12, 54, 0.10) 0%,
+    rgba(5, 12, 54, 0) 32%,
+    rgba(5, 12, 54, 0.55) 66%,
+    rgba(5, 12, 54, 0.92) 100%
+  );
+  pointer-events: none;
+}
+
+.ibfc-slide__body {
+  position: absolute;
+  z-index: 2;
+  left: clamp(20px, 2.4vw, 32px);
+  right: clamp(20px, 2.4vw, 32px);
+  bottom: clamp(20px, 2.4vw, 32px);
+  color: #fff;
+}
+.ibfc-slide__tag {
+  display: inline-block;
+  font-family: var(--font-sans);
+  font-size: 0.6875rem;
+  font-weight: 500;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: #fff;
+  padding: 5px 12px;
+  border-radius: var(--r-pill);
+  background: rgba(255, 255, 255, 0.16);
+  backdrop-filter: blur(10px) saturate(150%);
+  -webkit-backdrop-filter: blur(10px) saturate(150%);
+  border: 1px solid rgba(255, 255, 255, 0.30);
+  margin-bottom: var(--s-3);
+}
+.ibfc-slide__body h3 {
+  font-family: var(--font-display);
+  font-weight: 600;
+  font-size: clamp(1.375rem, 1.05rem + 1vw, 1.875rem);
+  line-height: 1.12;
+  letter-spacing: -0.01em;
+  color: #fff;
+}
+.ibfc-slide__body p {
+  margin-top: var(--s-2);
+  font-size: 0.875rem;
+  line-height: 1.55;
+  color: rgba(255, 255, 255, 0.82);
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+/* Controls — dots on the left, arrows on the right */
+.ibfc-carousel__controls {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--s-4);
+}
+.ibfc-carousel__dots {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+.ibfc-dot {
+  width: 8px;
+  height: 8px;
+  padding: 0;
+  border: 0;
+  border-radius: var(--r-pill);
+  background: var(--ink-12);
+  cursor: pointer;
+  transition: width var(--dur-base) var(--ease-settle),
+              background var(--dur-base) var(--ease-ui);
+}
+.ibfc-dot:hover { background: var(--ink-30); }
+.ibfc-dot.is-active {
+  width: 28px;
+  background: var(--flame);
+}
+.ibfc-dot:focus-visible { outline: 2px solid var(--flame); outline-offset: 3px; }
+
+.ibfc-carousel__arrows {
+  display: flex;
+  gap: var(--s-2);
+}
+.ibfc-arrow {
+  width: 42px;
+  height: 42px;
+  border-radius: var(--r-pill);
+  border: 1px solid var(--rule-strong);
+  background: var(--card);
+  color: var(--ink);
+  display: grid;
+  place-items: center;
+  cursor: pointer;
+  transition: background var(--dur-base) var(--ease-ui),
+              color var(--dur-base) var(--ease-ui),
+              border-color var(--dur-base) var(--ease-ui),
+              opacity var(--dur-base) var(--ease-ui);
+}
+.ibfc-arrow svg { width: 18px; height: 18px; }
+.ibfc-arrow:hover:not(:disabled) {
+  background: var(--ink);
+  color: var(--paper);
+  border-color: var(--ink);
+}
+.ibfc-arrow:disabled {
+  opacity: 0.32;
+  cursor: not-allowed;
+}
+.ibfc-arrow:focus-visible { outline: 2px solid var(--flame); outline-offset: 3px; }
+
+/* ============================================================
+   RIGHT: content
+   ============================================================ */
+.ibfc-content .eyebrow { margin-bottom: var(--s-3); }
+.ibfc-content h2 {
+  font-size: clamp(1.625rem, 1.2rem + 1.5vw, 2.375rem);
+  letter-spacing: -0.018em;
+  line-height: 1.14;
+  max-width: 20ch;
+}
+.ibfc-content h2 em { font-style: italic; color: var(--flame); }
+.ibfc-content__body > p {
+  margin-top: var(--s-4);
+  font-size: 0.9375rem;
+  line-height: 1.55;
+  color: var(--ink-70);
+  max-width: 58ch;
+}
+
+.ibfc-stats {
+  margin-top: var(--s-6);
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--s-3);
+}
+.ibfc-stat {
+  display: flex;
+  align-items: center;
+  gap: var(--s-3);
+  padding: var(--s-3) var(--s-4);
+  background: var(--card);
+  border: 1px solid var(--rule);
+  border-radius: var(--r-md);
+}
+.ibfc-stat__icon {
+  width: 42px;
+  height: 42px;
+  border-radius: var(--r-sm);
+  background: var(--flame-soft);
+  color: var(--flame);
+  display: grid;
+  place-items: center;
+  flex-shrink: 0;
+}
+.ibfc-stat__icon svg { width: 21px; height: 21px; }
+.ibfc-stat__text { display: flex; flex-direction: column; min-width: 0; }
+.ibfc-stat__label {
+  font-size: 0.75rem;
+  color: var(--ink-50);
+}
+.ibfc-stat__value {
+  font-family: var(--font-display);
+  font-size: 1.0625rem;
+  font-weight: 600;
+  color: var(--ink);
+  margin-top: 2px;
+}
+
+.ibfc-content .btn { margin-top: var(--s-6); }
+
+@media (max-width: 900px) {
+  .ibfc__grid { grid-template-columns: 1fr; gap: var(--s-8); }
+  .ibfc-carousel__viewport { aspect-ratio: 4 / 3; }
+}
+@media (max-width: 520px) {
+  .ibfc-stats { grid-template-columns: 1fr; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .ibfc-slide img,
+  .ibfc-carousel__track { transition: none !important; }
+}

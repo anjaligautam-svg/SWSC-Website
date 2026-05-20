@@ -9,7 +9,7 @@
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Instrument+Serif:ital@0;1&family=Poppins:wght@500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600&family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
 
   <link rel="stylesheet" href="css/reset.css" />
   <link rel="stylesheet" href="css/variables.css" />
@@ -17,13 +17,10 @@
   <link rel="stylesheet" href="css/sections/nav.css" />
   <link rel="stylesheet" href="css/sections/hero.css" />
   <link rel="stylesheet" href="css/sections/vision.css" />
-  <link rel="stylesheet" href="css/sections/marquee.css" />
-  <link rel="stylesheet" href="css/sections/problem.css" />
-  <link rel="stylesheet" href="css/sections/journeys.css" />
-  <link rel="stylesheet" href="css/sections/process.css" />
-  <link rel="stylesheet" href="css/sections/modules.css" />
-  <link rel="stylesheet" href="css/sections/scale.css" />
-  <link rel="stylesheet" href="css/sections/audience.css" />
+  <link rel="stylesheet" href="css/sections/about.css" />
+  <link rel="stylesheet" href="css/sections/network.css" />
+  <link rel="stylesheet" href="css/sections/testimonials.css" />
+  <link rel="stylesheet" href="css/sections/infrastructure.css" />
   <link rel="stylesheet" href="css/sections/help.css" />
   <link rel="stylesheet" href="css/sections/cta.css" />
   <link rel="stylesheet" href="css/sections/footer.css" />
@@ -67,7 +64,7 @@
     <div class="hero__stage">
 
       <!-- Bottom-center scroll cue — mouse silhouette with animated wheel + label -->
-      <a href="#about" class="hero__scroll" aria-label="Scroll to About section">
+      <a href="#vision" class="hero__scroll" aria-label="Scroll to the next section">
         <span class="hero__scroll-mouse" aria-hidden="true">
           <span class="hero__scroll-wheel"></span>
         </span>
@@ -148,7 +145,7 @@
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 17L17 7M17 7H8M17 7v9"/></svg>
           </span>
         </a>
-        <a class="quick-action glass-surface" href="#scale" data-idx="02">
+        <a class="quick-action glass-surface" href="#infrastructure" data-idx="02">
           <span class="quick-action__icon" aria-hidden="true">
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
               <polyline points="22 7 13.5 15.5 8.5 10.5 2 17"/>
@@ -160,7 +157,7 @@
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 17L17 7M17 7H8M17 7v9"/></svg>
           </span>
         </a>
-        <a class="quick-action glass-surface" href="#process" data-idx="03">
+        <a class="quick-action glass-surface" href="#help-desk" data-idx="03">
           <span class="quick-action__icon" aria-hidden="true">
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
               <circle cx="6" cy="19" r="3"/>
@@ -221,363 +218,395 @@
   </div>
 </section>
 
-<!-- ============================== TRUST STRIP ============================== -->
-<section class="marquee" aria-label="Integrated government systems">
-  <div class="container">
-    <div class="marquee__head">
-      <span class="label">Integrated with the systems investors already use</span>
-      <span class="label">P0 priority · auto-fill via API</span>
-    </div>
-    <div class="marquee__row">
-      <div class="marquee__item">
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="12" cy="8" r="4"/><path d="M4 21c1.5-4 4.5-6 8-6s6.5 2 8 6"/></svg>
-        Aadhaar eKYC
-      </div>
-      <div class="marquee__item">
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="M3 10h18"/></svg>
-        PAN
-      </div>
-      <div class="marquee__item">
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M3 7l9-4 9 4-9 4-9-4z"/><path d="M3 12l9 4 9-4M3 17l9 4 9-4"/></svg>
-        MCA21
-      </div>
-      <div class="marquee__item">
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M4 7h16M4 12h16M4 17h10"/></svg>
-        GSTIN
-      </div>
-      <div class="marquee__item">
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M4 12l4-8h8l4 8-8 8z"/></svg>
-        Udyam · MSME
-      </div>
-      <div class="marquee__item">
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="4" y="6" width="16" height="14" rx="2"/><path d="M8 6V4M16 6V4M4 11h16"/></svg>
-        DigiLocker
-      </div>
-      <div class="marquee__item">
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3a14 14 0 010 18M12 3a14 14 0 000 18"/></svg>
-        Passport · Foreign
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- ============================== ABOUT / PROBLEM ============================== -->
+<!-- ============================== ABOUT NAVEEN NAGPUR ============================== -->
 <section class="section" id="about">
-  <div class="container problem__grid">
-    <div class="problem__left reveal">
-      <p class="eyebrow">The problem we replace</p>
-      <h2>Setting up a business shouldn't require navigating <em>fifteen separate portals.</em></h2>
-      <p>Today, an investor at Naveen Nagpur has to file the same information across 15+ departments — each with its own portal, documentation, and timeline. SWCS removes the fragmentation. One application, structured routing, real-time visibility.</p>
-    </div>
-
-    <ol class="problem__list reveal" data-delay="1">
-      <li class="problem__row">
-        <span class="idx">01</span>
-        <div>
-          <div class="head">Fragmented approvals</div>
-          <p class="body">Registrations and operational approvals spread across separate government portals.</p>
-        </div>
-        <span class="stat">15+</span>
-      </li>
-      <li class="problem__row">
-        <span class="idx">02</span>
-        <div>
-          <div class="head">Repeated data entry</div>
-          <p class="body">The same promoter and business data submitted again and again across departments.</p>
-        </div>
-        <span class="stat">0×</span>
-      </li>
-      <li class="problem__row">
-        <span class="idx">03</span>
-        <div>
-          <div class="head">No status visibility</div>
-          <p class="body">Once submitted, applications disappear into department queues — no SLAs, no view.</p>
-        </div>
-        <span class="stat">∞</span>
-      </li>
-      <li class="problem__row">
-        <span class="idx">04</span>
-        <div>
-          <div class="head">External intermediaries</div>
-          <p class="body">Investors must independently engage CAs, CSs, and consultants — uncoordinated, unaccountable.</p>
-        </div>
-        <span class="stat">→ 1</span>
-      </li>
-    </ol>
-  </div>
-</section>
-
-<!-- ============================== JOURNEYS ============================== -->
-<section class="section section--paper-warm" id="journeys">
   <div class="container">
-    <div class="section__head reveal">
-      <p class="eyebrow">Two journeys, one platform</p>
-      <h2>Whether you're <em>incorporating</em> or <em>commencing operations</em> — SWCS routes the work.</h2>
-      <p>Every business has two milestones in front of it: a legal entity, then a set of operational permissions. SWCS treats them as connected journeys, not isolated portals.</p>
+    <div class="ibfc__grid">
+
+      <!-- Image carousel -->
+      <div class="ibfc-carousel reveal" data-carousel>
+        <div class="ibfc-carousel__viewport" data-carousel-viewport tabindex="0" role="region" aria-label="Naveen Nagpur IBFC, image carousel">
+          <div class="ibfc-carousel__track" data-carousel-track>
+
+            <article class="ibfc-slide">
+              <img src="assets/images/hero/hero-e.jpg" alt="Naveen Nagpur IBFC master rendering — central avenue and landscaped median" loading="lazy" />
+              <div class="ibfc-slide__body">
+                <span class="ibfc-slide__tag">Master Plan</span>
+                <h3>The Naveen Nagpur Vision</h3>
+                <p>A 692-hectare greenfield township, master-planned for finance, technology, and enterprise.</p>
+              </div>
+            </article>
+
+            <article class="ibfc-slide">
+              <img src="assets/images/hero/hero-b.jpg" alt="Financial district skyline at sunrise" loading="lazy" />
+              <div class="ibfc-slide__body">
+                <span class="ibfc-slide__tag">Finance Zone</span>
+                <h3>An International Finance District</h3>
+                <p>Dedicated zones for banks, financial institutions, and global capability centres.</p>
+              </div>
+            </article>
+
+            <article class="ibfc-slide">
+              <img src="assets/images/hero/hero-c.jpg" alt="Analyst at a multi-monitor workstation" loading="lazy" />
+              <div class="ibfc-slide__body">
+                <span class="ibfc-slide__tag">IT / ITeS</span>
+                <h3>Plug-and-Play Technology Campuses</h3>
+                <p>Built-ready space for technology firms, R&amp;D centres, and back-office operations.</p>
+              </div>
+            </article>
+
+            <article class="ibfc-slide">
+              <img src="assets/images/hero/hero-a.jpg" alt="Indian manufacturing plant — Make in India" loading="lazy" />
+              <div class="ibfc-slide__body">
+                <span class="ibfc-slide__tag">Manufacturing</span>
+                <h3>Industry-Ready Enterprise Plots</h3>
+                <p>Industrial land with dedicated power and logistics for Make-in-India businesses.</p>
+              </div>
+            </article>
+
+            <article class="ibfc-slide">
+              <img src="assets/images/hero/hero-d.jpg" alt="Team collaborating in a modern Indian office" loading="lazy" />
+              <div class="ibfc-slide__body">
+                <span class="ibfc-slide__tag">Live &amp; Work</span>
+                <h3>A Complete Live-Work Community</h3>
+                <p>Residential, retail, and social infrastructure woven into the township plan.</p>
+              </div>
+            </article>
+
+          </div>
+        </div>
+
+        <div class="ibfc-carousel__controls">
+          <div class="ibfc-carousel__dots" data-carousel-dots aria-hidden="true"></div>
+          <div class="ibfc-carousel__arrows">
+            <button class="ibfc-arrow" type="button" data-carousel-prev aria-label="Previous image">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M19 12H5M12 19l-7-7 7-7"/></svg>
+            </button>
+            <button class="ibfc-arrow" type="button" data-carousel-next aria-label="Next image">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Content -->
+      <div class="ibfc-content">
+        <p class="eyebrow reveal">About Naveen Nagpur</p>
+        <h2 class="reveal" data-delay="1">India's Next-Generation International Business &amp; Finance Centre</h2>
+
+        <div class="ibfc-content__body reveal" data-delay="2">
+          <p>Naveen Nagpur is a 692-hectare greenfield township being developed by the Nagpur Metropolitan Region Development Authority (NMRDA) as a planned International Business and Finance Centre (IBFC). Strategically located in central India, it is positioned to become a world-class destination for financial services, IT, and manufacturing enterprises.</p>
+          <p>The township is designed as an eco-smart city with underground utility infrastructure, 25% mandatory green cover, dedicated power supply, and multi-modal transport connectivity — including Nagpur Metro Line 2, Samruddhi Mahamarg Expressway, and Dr. Babasaheb Ambedkar International Airport.</p>
+        </div>
+
+        <div class="ibfc-stats reveal" data-delay="3">
+          <div class="ibfc-stat">
+            <span class="ibfc-stat__icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round">
+                <rect x="4" y="2" width="16" height="20" rx="2"/>
+                <path d="M9 22v-4h6v4"/>
+                <path d="M8 6h.01M16 6h.01M8 10h.01M16 10h.01M8 14h.01M16 14h.01"/>
+              </svg>
+            </span>
+            <span class="ibfc-stat__text">
+              <span class="ibfc-stat__label">Total Area</span>
+              <span class="ibfc-stat__value">692 Hectares</span>
+            </span>
+          </div>
+
+          <div class="ibfc-stat">
+            <span class="ibfc-stat__icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round">
+                <rect x="2" y="6" width="20" height="12" rx="2"/>
+                <circle cx="12" cy="12" r="2.5"/>
+                <path d="M6 12h.01M18 12h.01"/>
+              </svg>
+            </span>
+            <span class="ibfc-stat__text">
+              <span class="ibfc-stat__label">Investment Target</span>
+              <span class="ibfc-stat__value">&#8377;8,200 Crore</span>
+            </span>
+          </div>
+
+          <div class="ibfc-stat">
+            <span class="ibfc-stat__icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M21.8 10A10 10 0 1 1 17 3.3"/>
+                <path d="m9 11 3 3L22 4"/>
+              </svg>
+            </span>
+            <span class="ibfc-stat__text">
+              <span class="ibfc-stat__label">Allottable Land</span>
+              <span class="ibfc-stat__value">400+ Hectares</span>
+            </span>
+          </div>
+
+          <div class="ibfc-stat">
+            <span class="ibfc-stat__icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round">
+                <path d="m17 14 3 3.3a1 1 0 0 1-.7 1.7H4.7a1 1 0 0 1-.7-1.7L7 14h-.3a1 1 0 0 1-.7-1.7L9 9h-.2A1 1 0 0 1 8 7.3L12 3l4 4.3a1 1 0 0 1-.8 1.7H15l3 3.3a1 1 0 0 1-.7 1.7H17Z"/>
+                <path d="M12 22v-3"/>
+              </svg>
+            </span>
+            <span class="ibfc-stat__text">
+              <span class="ibfc-stat__label">Mandatory Green Cover</span>
+              <span class="ibfc-stat__value">Minimum 25%</span>
+            </span>
+          </div>
+        </div>
+
+        <a class="btn btn--primary reveal" data-delay="4" href="#infrastructure">
+          Explore Infrastructure
+          <svg class="arrow" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M5 12h14M13 5l7 7-7 7"/></svg>
+        </a>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ============================== GOVERNMENT INTEGRATION NETWORK ============================== -->
+<section class="section section--paper-warm" id="network">
+  <div class="container">
+    <div class="network__head reveal">
+      <p class="eyebrow">Government Integration Network</p>
+      <h2>Integrated with Government Departments and <em>Regulatory Bodies</em></h2>
+      <p>Applications filed on this portal are forwarded electronically to all relevant departments and agencies. You do not need to approach each department separately.</p>
     </div>
 
-    <div class="journeys__grid">
-      <article class="journey reveal">
-        <div class="journey__tag"><span class="badge">A</span> Business Registration</div>
-        <h3>Incorporate the entity — <em>professionally managed.</em></h3>
-        <p class="journey__lede">A licensed CA or CS is assigned to your account on payment. They handle every filing, every submission, every compliance touchpoint on your behalf.</p>
-        <hr class="journey__rule" />
-        <ul class="journey__list">
-          <li>Private Limited, LLP, OPC, Partnership, Sole Proprietorship</li>
-          <li>Foreign Subsidiary with FEMA / FDI compliance</li>
-          <li>Director details auto-fetched from MCA21 (DIN / CIN / LLPIN)</li>
-          <li>Aadhaar eKYC + PAN validation, no paper</li>
-        </ul>
-        <div class="journey__foot">
-          <span class="meta">CA/CS managed-service</span>
-          <a class="btn btn--ghost" href="#register">Begin Journey A
-            <svg class="arrow" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 5l7 7-7 7"/></svg>
-          </a>
+    <div class="network__grid">
+      <article class="net-card reveal" data-delay="1">
+        <span class="net-card__icon net-card__icon--info" aria-hidden="true">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M12.83 2.18a2 2 0 0 0-1.66 0L2.6 6.08a1 1 0 0 0 0 1.83l8.57 3.91a2 2 0 0 0 1.66 0l8.57-3.9a1 1 0 0 0 0-1.84Z"/>
+            <path d="m22 17.65-9.17 4.16a2 2 0 0 1-1.66 0L2 17.65"/>
+            <path d="m22 12.65-9.17 4.16a2 2 0 0 1-1.66 0L2 12.65"/>
+          </svg>
+        </span>
+        <h3>Revenue Dept.</h3>
+        <p>7/12 extract, property card &amp; mutation</p>
+        <span class="net-card__tag net-card__tag--info">Land Records</span>
+      </article>
+
+      <article class="net-card reveal" data-delay="2">
+        <span class="net-card__icon net-card__icon--success" aria-hidden="true">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M4 2v20l2-1 2 1 2-1 2 1 2-1 2 1 2-1 2 1V2l-2 1-2-1-2 1-2-1-2 1-2-1-2 1Z"/>
+            <path d="M8 7h8M8 11h8M8 15h5"/>
+          </svg>
+        </span>
+        <h3>GSTN</h3>
+        <p>GST registration &amp; business identification</p>
+        <span class="net-card__tag net-card__tag--success">Tax Registry</span>
+      </article>
+
+      <article class="net-card reveal" data-delay="3">
+        <span class="net-card__icon net-card__icon--ink" aria-hidden="true">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round">
+            <rect x="2" y="7" width="20" height="14" rx="2"/>
+            <path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"/>
+          </svg>
+        </span>
+        <h3>MCA / ROC</h3>
+        <p>Company CIN fetch, incorporation &amp; ROF API</p>
+        <span class="net-card__tag net-card__tag--ink">Corp. Registry</span>
+      </article>
+
+      <article class="net-card reveal" data-delay="4">
+        <span class="net-card__icon net-card__icon--flame" aria-hidden="true">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M4.5 16.5c-1.5 1.26-2 5-2 5s3.74-.5 5-2c.71-.84.7-2.13-.09-2.91a2.18 2.18 0 0 0-2.91-.09Z"/>
+            <path d="m12 15-3-3a22 22 0 0 1 2-3.95A12.88 12.88 0 0 1 22 2c0 2.72-.78 7.5-6 11a22.35 22.35 0 0 1-4 2Z"/>
+            <path d="M9 12H4s.55-3.03 2-4c1.62-1.08 5 0 5 0"/>
+            <path d="M12 15v5s3.03-.55 4-2c1.08-1.62 0-5 0-5"/>
+          </svg>
+        </span>
+        <h3>DPIIT</h3>
+        <p>Startup recognition, EODB &amp; FDI compliance</p>
+        <span class="net-card__tag net-card__tag--flame">Startup India</span>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- ============================== LEADERSHIP / TESTIMONIALS ============================== -->
+<section class="section" id="leadership">
+  <div class="container">
+    <div class="t-head reveal">
+      <p class="eyebrow">About NMRDA Ministers</p>
+      <h2>Leadership Driving <em>Naveen Nagpur</em></h2>
+      <p>The development of Naveen Nagpur IBFC is led by the Government of Maharashtra under the vision of the Chief Minister and guided by the Nagpur Metropolitan Region Development Authority.</p>
+    </div>
+
+    <div class="leadership__grid">
+      <div class="t-card reveal" data-delay="1">
+        <article class="t-card__inner" data-glow>
+          <span class="t-card__glow" aria-hidden="true"></span>
+          <span class="t-card__quote" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M10 7H6a2 2 0 0 0-2 2v4a2 2 0 0 0 2 2h2v1a3 3 0 0 1-3 3 1 1 0 1 0 0 2 5 5 0 0 0 5-5V9a2 2 0 0 0-2-2Zm10 0h-4a2 2 0 0 0-2 2v4a2 2 0 0 0 2 2h2v1a3 3 0 0 1-3 3 1 1 0 1 0 0 2 5 5 0 0 0 5-5V9a2 2 0 0 0-2-2Z"/></svg>
+          </span>
+          <p class="t-card__text">"Naveen Nagpur will be a model smart city that showcases Maharashtra's capacity to deliver world-class infrastructure and a truly business-friendly environment for every investor."</p>
+          <hr class="t-card__rule" />
+          <p class="t-card__name">Shri. Devendra Fadnavis</p>
+          <p class="t-card__role">Chief Minister, Maharashtra</p>
+          <p class="t-card__org">Chairman, NMRDA</p>
+        </article>
+      </div>
+
+      <div class="t-card reveal" data-delay="2">
+        <article class="t-card__inner" data-glow>
+          <span class="t-card__glow" aria-hidden="true"></span>
+          <span class="t-card__quote" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M10 7H6a2 2 0 0 0-2 2v4a2 2 0 0 0 2 2h2v1a3 3 0 0 1-3 3 1 1 0 1 0 0 2 5 5 0 0 0 5-5V9a2 2 0 0 0-2-2Zm10 0h-4a2 2 0 0 0-2 2v4a2 2 0 0 0 2 2h2v1a3 3 0 0 1-3 3 1 1 0 1 0 0 2 5 5 0 0 0 5-5V9a2 2 0 0 0-2-2Z"/></svg>
+          </span>
+          <p class="t-card__text">"The Single Window Clearance System is a transformative step — ensuring that investors in Naveen Nagpur IBFC receive all their approvals in a time-bound, transparent manner."</p>
+          <hr class="t-card__rule" />
+          <p class="t-card__name">Shri. Eknath Shinde</p>
+          <p class="t-card__role">Deputy Chief Minister</p>
+          <p class="t-card__org">Government of Maharashtra</p>
+        </article>
+      </div>
+
+      <div class="t-card reveal" data-delay="3">
+        <article class="t-card__inner" data-glow>
+          <span class="t-card__glow" aria-hidden="true"></span>
+          <span class="t-card__quote" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M10 7H6a2 2 0 0 0-2 2v4a2 2 0 0 0 2 2h2v1a3 3 0 0 1-3 3 1 1 0 1 0 0 2 5 5 0 0 0 5-5V9a2 2 0 0 0-2-2Zm10 0h-4a2 2 0 0 0-2 2v4a2 2 0 0 0 2 2h2v1a3 3 0 0 1-3 3 1 1 0 1 0 0 2 5 5 0 0 0 5-5V9a2 2 0 0 0-2-2Z"/></svg>
+          </span>
+          <p class="t-card__text">"We are committed to making Naveen Nagpur a destination of choice for domestic and international investment by removing every barrier in the regulatory process."</p>
+          <hr class="t-card__rule" />
+          <p class="t-card__name">Smt. Sunetra Pawar</p>
+          <p class="t-card__role">Deputy Chief Minister</p>
+          <p class="t-card__org">Government of Maharashtra</p>
+        </article>
+      </div>
+
+      <div class="t-card reveal" data-delay="4">
+        <article class="t-card__inner" data-glow>
+          <span class="t-card__glow" aria-hidden="true"></span>
+          <span class="t-card__quote" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M10 7H6a2 2 0 0 0-2 2v4a2 2 0 0 0 2 2h2v1a3 3 0 0 1-3 3 1 1 0 1 0 0 2 5 5 0 0 0 5-5V9a2 2 0 0 0-2-2Zm10 0h-4a2 2 0 0 0-2 2v4a2 2 0 0 0 2 2h2v1a3 3 0 0 1-3 3 1 1 0 1 0 0 2 5 5 0 0 0 5-5V9a2 2 0 0 0-2-2Z"/></svg>
+          </span>
+          <p class="t-card__text">"Leading the development and regulatory framework for Naveen Nagpur IBFC — overseeing infrastructure delivery, investor onboarding, and the Single Window Clearance System."</p>
+          <hr class="t-card__rule" />
+          <p class="t-card__name">Shri. Sanjay Meena, I.A.S.</p>
+          <p class="t-card__role">Metropolitan Commissioner</p>
+          <p class="t-card__org">CEO, NMRDA</p>
+        </article>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================== INFRASTRUCTURE ============================== -->
+<section class="section infra" id="infrastructure">
+  <div class="container">
+    <div class="infra__head reveal">
+      <p class="eyebrow">Why Invest Here</p>
+      <h2>Infrastructure at <em>Naveen Nagpur IBFC</em></h2>
+      <p>The Naveen Nagpur IBFC has been planned with integrated infrastructure to support immediate business establishment. The following facilities are available to allottees from the date of possession.</p>
+    </div>
+
+    <div class="infra__grid">
+
+      <article class="infra-card reveal" data-delay="1">
+        <span class="infra-card__icon" aria-hidden="true">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round">
+            <rect x="2" y="2" width="20" height="8" rx="2"/>
+            <rect x="2" y="14" width="20" height="8" rx="2"/>
+            <line x1="6" y1="6" x2="6.01" y2="6"/>
+            <line x1="6" y1="18" x2="6.01" y2="18"/>
+          </svg>
+        </span>
+        <span class="infra-card__tag">Utility Infrastructure</span>
+        <h3>Underground Utility Tunnel</h3>
+        <p class="infra-card__desc">Underground utility tunnels of 3.5m by 2.5m run beneath all internal roads of the township, carrying power, telecom, water, and gas lines. Road surfaces are not disturbed for utility maintenance or upgradation.</p>
+        <hr class="infra-card__rule" />
+        <div class="infra-card__specs">
+          <div><strong>Length:</strong> 42 km of utility corridors</div>
+          <div><strong>Services:</strong> HT/LT Power, OFC, Water, Gas</div>
+          <div><strong>Standard:</strong> Trenchless installation, ISO 9001</div>
+          <div><strong>Access:</strong> 24/7 SCADA-monitored manholes</div>
         </div>
       </article>
 
-      <article class="journey journey--ink reveal" data-delay="1">
-        <div class="journey__tag"><span class="badge">B</span> Operational Approvals</div>
-        <h3>Get every NOC, license, and permission — <em>in one tracker.</em></h3>
-        <p class="journey__lede">Sector-specific approvals identified automatically by our Business Details Bot, routed through the portal where deep integration is available — guided redirection where it isn't.</p>
-        <hr class="journey__rule" />
-        <ul class="journey__list">
-          <li>10 sectors covered in the live approval matrix</li>
-          <li>Fire NOC, GST, EPFO, ESIC, IEC and more</li>
-          <li>SLA timer per approval — escalations on breach</li>
-          <li>Deemed approval triggers configured by NMRDA</li>
-        </ul>
-        <div class="journey__foot">
-          <span class="meta">Hybrid integration model</span>
-          <a class="btn btn--primary" href="#register">Begin Journey B
-            <svg class="arrow" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 5l7 7-7 7"/></svg>
-          </a>
+      <article class="infra-card reveal" data-delay="2">
+        <span class="infra-card__icon" aria-hidden="true">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M14.106 5.553a2 2 0 0 0 1.788 0l3.659-1.83A1 1 0 0 1 21 4.619v12.764a1 1 0 0 1-.553.894l-4.553 2.277a2 2 0 0 1-1.788 0l-4.212-2.106a2 2 0 0 0-1.788 0l-3.659 1.83A1 1 0 0 1 3 19.381V6.618a1 1 0 0 1 .553-.894l4.553-2.277a2 2 0 0 1 1.788 0z"/>
+            <path d="M15 5.764v15"/>
+            <path d="M9 3.236v15"/>
+          </svg>
+        </span>
+        <span class="infra-card__tag">Plot Allotment</span>
+        <h3>Service-Ready Plots for Allotment</h3>
+        <p class="infra-card__desc">Plots are pre-certified under applicable Development Control Regulations. Electricity, water, sewerage, optical fibre, and piped gas connections are available at the plot boundary from the date of possession.</p>
+        <hr class="infra-card__rule" />
+        <div class="infra-card__specs">
+          <div><strong>Total Area:</strong> 692 hectares master plan</div>
+          <div><strong>Allocated:</strong> 400+ Ha ready for allotment</div>
+          <div><strong>Plot Range:</strong> 500 sqm to 50 acres</div>
+          <div><strong>Pre-approved:</strong> DCR norms pre-certified</div>
         </div>
       </article>
-    </div>
-  </div>
-</section>
 
-<!-- ============================== PROCESS ============================== -->
-<section class="section" id="process">
-  <div class="container">
-    <div class="section__head reveal">
-      <p class="eyebrow">How it works</p>
-      <h2>Four steps from intent to operational.</h2>
-      <p>Each step is designed to take minutes, not weeks. The platform does the discovery work, the integration work, and the tracking work — so investors and CA/CS professionals can move.</p>
-    </div>
-
-    <ol class="process__steps">
-      <li class="process__step reveal">
-        <span class="process__num">1</span>
-        <span class="kicker">Step one</span>
-        <h3>Onboard in minutes</h3>
-        <p>Register with email + OTP. CAPTCHA-protected, foreign-national friendly, no document uploads at this stage.</p>
-      </li>
-      <li class="process__step reveal" data-delay="1">
-        <span class="process__num">2</span>
-        <span class="kicker">Step two</span>
-        <h3>Identify approvals</h3>
-        <p>A conversational bot maps your sector, scale, and operations against our matrix to surface the exact approvals you need.</p>
-      </li>
-      <li class="process__step reveal" data-delay="2">
-        <span class="process__num">3</span>
-        <span class="kicker">Step three</span>
-        <h3>Pay &amp; get assigned</h3>
-        <p>Review fees, pay once, and a CA/CS is assigned to your case. The Common Application Form unlocks with auto-filled data.</p>
-      </li>
-      <li class="process__step reveal" data-delay="3">
-        <span class="process__num">4</span>
-        <span class="kicker">Step four</span>
-        <h3>Track to completion</h3>
-        <p>Every application visible in real time, with SLA timers, clarification requests, and one-click escalation when needed.</p>
-      </li>
-    </ol>
-  </div>
-</section>
-
-<!-- ============================== MODULES ============================== -->
-<section class="section section--paper-warm" id="platform">
-  <div class="container">
-    <div class="modules__head">
-      <div class="reveal">
-        <p class="eyebrow">The platform</p>
-        <h2>Ten production modules, four portals, one data backbone.</h2>
-      </div>
-      <p class="meta reveal" data-delay="1">Each module is built once and reused across all approvals. GIS Map integration is staged for Phase 2 pending NMRDA building plans.</p>
-    </div>
-
-    <div class="modules__grid">
-      <article class="module reveal">
-        <span class="module__icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="11" width="18" height="10" rx="2"/><path d="M7 11V7a5 5 0 0110 0v4"/></svg></span>
-        <h3 class="module__name">Login &amp; Registration</h3>
-        <p class="module__desc">Email + OTP with CAPTCHA. Lockout after 3 failed attempts. Foreign-national friendly.</p>
-        <span class="module__tag">User-facing</span>
+      <article class="infra-card reveal" data-delay="3">
+        <span class="infra-card__icon" aria-hidden="true">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round">
+            <circle cx="6" cy="19" r="3"/>
+            <path d="M9 19h8.5a3.5 3.5 0 0 0 0-7h-11a3.5 3.5 0 0 1 0-7H15"/>
+            <circle cx="18" cy="5" r="3"/>
+          </svg>
+        </span>
+        <span class="infra-card__tag">Connectivity</span>
+        <h3>Transport Connectivity</h3>
+        <p class="infra-card__desc">The project site is located within proximity of Nagpur Metro Line 2, the Samruddhi Mahamarg Expressway, and Dr. Babasaheb Ambedkar International Airport, Nagpur.</p>
+        <hr class="infra-card__rule" />
+        <div class="infra-card__specs">
+          <div><strong>Metro:</strong> Nagpur Metro Line 2 (0.8 km)</div>
+          <div><strong>Highway:</strong> Samruddhi Mahamarg (2 km)</div>
+          <div><strong>Airport:</strong> VVIP Airport (12 km)</div>
+          <div><strong>Rail:</strong> Nagpur Junction (18 km)</div>
+        </div>
       </article>
 
-      <article class="module reveal" data-delay="1">
-        <span class="module__icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M21 12a9 9 0 11-3.5-7.1L21 4v6h-6"/></svg></span>
-        <h3 class="module__name">Business Details Bot</h3>
-        <p class="module__desc">Conversational onboarding that maps your profile against the approval matrix.</p>
-        <span class="module__tag">User-facing</span>
+      <article class="infra-card infra-card--wide reveal" data-delay="1">
+        <span class="infra-card__icon" aria-hidden="true">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round">
+            <path d="m17 14 3 3.3a1 1 0 0 1-.7 1.7H4.7a1 1 0 0 1-.7-1.7L7 14h-.3a1 1 0 0 1-.7-1.7L9 9h-.2A1 1 0 0 1 8 7.3L12 3l4 4.3a1 1 0 0 1-.8 1.7H15l3 3.3a1 1 0 0 1-.7 1.7H17Z"/>
+            <path d="M12 22v-3"/>
+          </svg>
+        </span>
+        <span class="infra-card__tag">Green Standards</span>
+        <h3>Green Township and Environmental Compliance Standards</h3>
+        <p class="infra-card__desc">The master plan has been prepared to conform with IGBC Green Township standards. A minimum of 25 percent green cover is mandatory across the township, with rainwater harvesting, solar-ready infrastructure, and zero liquid discharge systems at the precinct level.</p>
+        <hr class="infra-card__rule" />
+        <div class="infra-card__specs">
+          <div><strong>Green Cover:</strong> 25% minimum, 173+ Ha parks</div>
+          <div><strong>Solar:</strong> 150 MW rooftop solar capacity</div>
+          <div><strong>Waste:</strong> Automated Pneumatic Collection</div>
+          <div><strong>Water:</strong> STP + ZLD for all industrial zones</div>
+        </div>
       </article>
 
-      <article class="module reveal" data-delay="2">
-        <span class="module__icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M9 11l3 3 8-8"/><path d="M21 12v7a2 2 0 01-2 2H5a2 2 0 01-2-2V5a2 2 0 012-2h11"/></svg></span>
-        <h3 class="module__name">Approval Checklist</h3>
-        <p class="module__desc">Personalised list with pricing, opt-in selection, and the path to payment or skip-to-CAF.</p>
-        <span class="module__tag">User-facing</span>
+      <article class="infra-card infra-card--wide reveal" data-delay="2">
+        <span class="infra-card__icon" aria-hidden="true">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M4 14a1 1 0 0 1-.78-1.63l9.9-10.2a.5.5 0 0 1 .86.46l-1.92 6.02A1 1 0 0 0 13 10h7a1 1 0 0 1 .78 1.63l-9.9 10.2a.5.5 0 0 1-.86-.46l1.92-6.02A1 1 0 0 0 11 14z"/>
+          </svg>
+        </span>
+        <span class="infra-card__tag">Digital Infrastructure</span>
+        <h3>Power Supply and Digital Infrastructure</h3>
+        <p class="infra-card__desc">A dedicated 400 kV grid sub-station provides assured power supply to the IBFC zone. The township has a 100 Gbps redundant optical fibre ring and a public Wi-Fi network across all common areas.</p>
+        <hr class="infra-card__rule" />
+        <div class="infra-card__specs">
+          <div><strong>Power:</strong> 400 kV sub-station, 99.9% uptime SLA</div>
+          <div><strong>Fibre:</strong> 100 Gbps redundant OFC ring</div>
+          <div><strong>Wi-Fi:</strong> City-wide 10,000+ access points</div>
+          <div><strong>Data Centre:</strong> Tier III+ DC zone earmarked</div>
+        </div>
       </article>
 
-      <article class="module reveal" data-delay="3">
-        <span class="module__icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8z"/><path d="M14 2v6h6M9 13h6M9 17h4"/></svg></span>
-        <h3 class="module__name">Common Application Form</h3>
-        <p class="module__desc">Single dynamic form. API auto-fill from PAN, MCA21, GSTIN, Udyam — no repeated entry.</p>
-        <span class="module__tag">User-facing</span>
-      </article>
-
-      <article class="module reveal">
-        <span class="module__icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 3"/></svg></span>
-        <h3 class="module__name">Application Tracker</h3>
-        <p class="module__desc">Per-application SLA timers, clarifications, escalation on breach, real-time updates.</p>
-        <span class="module__tag">User-facing</span>
-      </article>
-
-      <article class="module reveal" data-delay="1">
-        <span class="module__icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M17 21v-2a4 4 0 00-4-4H7a4 4 0 00-4 4v2"/><circle cx="10" cy="7" r="4"/><path d="M21 21v-2a4 4 0 00-3-3.9"/><path d="M17 3.1a4 4 0 010 7.8"/></svg></span>
-        <h3 class="module__name">CA / CS Portal</h3>
-        <p class="module__desc">Case dashboard for licensed professionals — review CAF, manage documents, update status.</p>
-        <span class="module__tag">Operational</span>
-      </article>
-
-      <article class="module reveal" data-delay="2">
-        <span class="module__icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M21 15a2 2 0 01-2 2H7l-4 4V5a2 2 0 012-2h14a2 2 0 012 2z"/></svg></span>
-        <h3 class="module__name">Chat</h3>
-        <p class="module__desc">Direct messaging between investor and assigned CA/CS, with full audit history.</p>
-        <span class="module__tag">Operational</span>
-      </article>
-
-      <article class="module reveal" data-delay="3">
-        <span class="module__icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 9v4M12 17h.01"/><path d="M10.3 3.86L1.82 18a2 2 0 001.71 3h16.94a2 2 0 001.71-3L13.71 3.86a2 2 0 00-3.42 0z"/></svg></span>
-        <h3 class="module__name">Grievance Management</h3>
-        <p class="module__desc">Formal escalation channel with reference numbers, SLA, and investor-confirmed resolution.</p>
-        <span class="module__tag">Operational</span>
-      </article>
-
-      <article class="module reveal">
-        <span class="module__icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="3" width="7" height="9"/><rect x="14" y="3" width="7" height="5"/><rect x="14" y="12" width="7" height="9"/><rect x="3" y="16" width="7" height="5"/></svg></span>
-        <h3 class="module__name">Admin Portal</h3>
-        <p class="module__desc">Pipeline analytics, SLA configuration, CA/CS empanelment, and grievance oversight for NMRDA.</p>
-        <span class="module__tag">Operational</span>
-      </article>
-
-      <article class="module reveal" data-delay="1">
-        <span class="module__icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M4 4h16v12H5.17L4 17.17z"/><path d="M8 9h8M8 12h5"/></svg></span>
-        <h3 class="module__name">Communications</h3>
-        <p class="module__desc">Email, SMS, and WhatsApp triggers across every significant event, NMRDA-templated.</p>
-        <span class="module__tag">Cross-cutting</span>
-      </article>
-
-      <article class="module module--phase2 reveal" data-delay="2">
-        <span class="module__icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg></span>
-        <h3 class="module__name">GIS Map Integration</h3>
-        <p class="module__desc">Plot-level visualisation across the 692 Ha hub. Site selection, zoning, infrastructure overlays.</p>
-        <span class="module__tag">Phase 2 · Coming soon</span>
-      </article>
-
-      <article class="module reveal" data-delay="3">
-        <span class="module__icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3a14 14 0 010 18M12 3a14 14 0 000 18"/></svg></span>
-        <h3 class="module__name">Officer Portal</h3>
-        <p class="module__desc">Approval workflow for NMRDA and external department officers — scoped, auditable, end-to-end.</p>
-        <span class="module__tag">Operational</span>
-      </article>
-    </div>
-  </div>
-</section>
-
-<!-- ============================== SCALE ============================== -->
-<section class="scale" id="scale">
-  <div class="container scale__inner">
-    <div class="scale__head reveal">
-      <p class="eyebrow">The Hub</p>
-      <h2>Naveen Nagpur is being purpose-built — <em>for serious investors.</em></h2>
-      <p>A 692-hectare greenfield International Business and Finance Hub developed by NMRDA across Godhni, Ladgaon, and Hingna. SWCS is the digital infrastructure that makes operating here as fast as the physical infrastructure is ambitious.</p>
-    </div>
-
-    <div class="scale__grid">
-      <div class="scale__item reveal">
-        <div class="scale__num">692<span class="unit">hectares</span></div>
-        <p class="scale__lbl">Greenfield masterplan across three revenue villages</p>
-      </div>
-      <div class="scale__item reveal" data-delay="1">
-        <div class="scale__num">₹8,200<span class="unit">crore</span></div>
-        <p class="scale__lbl">Investment target across the hub</p>
-      </div>
-      <div class="scale__item reveal" data-delay="2">
-        <div class="scale__num">42<span class="unit">km</span></div>
-        <p class="scale__lbl">Underground utility tunnels — power, water, fiber, drainage</p>
-      </div>
-      <div class="scale__item reveal">
-        <div class="scale__num">400<span class="unit">kV</span></div>
-        <p class="scale__lbl">Dedicated power supply, redundant feeders</p>
-      </div>
-      <div class="scale__item reveal" data-delay="1">
-        <div class="scale__num">100<span class="unit">Gbps</span></div>
-        <p class="scale__lbl">Optical fiber backbone across every zone</p>
-      </div>
-      <div class="scale__item reveal" data-delay="2">
-        <div class="scale__num">25<span class="unit">% green</span></div>
-        <p class="scale__lbl">Mandatory green cover, woven into the masterplan</p>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- ============================== AUDIENCE ============================== -->
-<section class="section" id="audience">
-  <div class="container">
-    <div class="section__head reveal">
-      <p class="eyebrow">Built for</p>
-      <h2>Four user groups. <em>One coordinated platform.</em></h2>
-      <p>Role-based access at every endpoint. Investors see their applications, professionals see their cases, officers see their queues, and NMRDA sees the whole pipeline.</p>
-    </div>
-
-    <div class="audience__grid">
-      <article class="audience-card reveal">
-        <span class="audience-card__role">Investor</span>
-        <h3>Domestic &amp; foreign promoters</h3>
-        <p>Apply once. Track everything. FEMA/FDI handling built into the registration journey for foreign subsidiaries.</p>
-        <a href="#register" class="audience-card__cta">Open portal
-          <svg class="arrow" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 5l7 7-7 7"/></svg>
-        </a>
-      </article>
-
-      <article class="audience-card reveal" data-delay="1">
-        <span class="audience-card__role">CA / CS</span>
-        <h3>Empanelled professionals</h3>
-        <p>Case dashboards, document handling, clarification requests, status updates — purpose-built for licensed practice.</p>
-        <a href="#login" class="audience-card__cta">CA/CS sign-in
-          <svg class="arrow" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 5l7 7-7 7"/></svg>
-        </a>
-      </article>
-
-      <article class="audience-card reveal" data-delay="2">
-        <span class="audience-card__role">Officer</span>
-        <h3>NMRDA &amp; department officers</h3>
-        <p>Scoped queues, approval workflows configured within SWCS — starting with Fire NOC, expanding across departments.</p>
-        <a href="#login" class="audience-card__cta">Officer sign-in
-          <svg class="arrow" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 5l7 7-7 7"/></svg>
-        </a>
-      </article>
-
-      <article class="audience-card reveal" data-delay="3">
-        <span class="audience-card__role">Administrator</span>
-        <h3>NMRDA control centre</h3>
-        <p>Pipeline analytics, SLA configuration, CA/CS empanelment, grievance oversight — the full operational view.</p>
-        <a href="#login" class="audience-card__cta">Admin sign-in
-          <svg class="arrow" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 5l7 7-7 7"/></svg>
-        </a>
-      </article>
     </div>
   </div>
 </section>
@@ -659,22 +688,47 @@
   </div>
 </section>
 
-<!-- ============================== FINAL CTA ============================== -->
+<!-- ============================== FINAL CTA / REGISTER ============================== -->
 <section class="final-cta">
   <div class="container final-cta__inner">
-    <p class="eyebrow reveal">Start at Naveen Nagpur</p>
-    <h2 class="reveal" data-delay="1">Begin your application — <em>finish operational</em>.</h2>
-    <p class="reveal" data-delay="2">Register with your email in under a minute. The Business Details Bot will identify exactly which approvals apply to your business — no guesswork, no advisors needed at this stage.</p>
+    <h2 class="reveal">Register on the NMRDA <em>Single Window Clearance System</em></h2>
+    <p class="final-cta__lede reveal" data-delay="1">Investors and businesses proposing to establish operations in the Naveen Nagpur IBFC are required to register on this portal to apply for the necessary approvals and licences. More than 200 applicants have registered since the portal's launch.</p>
 
-    <div class="final-cta__actions reveal" data-delay="3">
+    <div class="final-cta__actions reveal" data-delay="2">
       <a class="btn btn--primary" href="#register">
-        Create investor account
+        Proceed to Registration
         <svg class="arrow" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 5l7 7-7 7"/></svg>
       </a>
-      <a class="btn btn--ghost" href="#contact">Talk to NMRDA</a>
+      <a class="btn btn--ghost" href="#approvals">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.3-4.3"/></svg>
+        Identify Required Approvals
+      </a>
     </div>
 
-    <p class="final-cta__meta reveal" data-delay="4">CERT-In Safe-to-Host · TLS 1.2 · AES-256 at rest · 99.5% uptime</p>
+    <p class="final-cta__note reveal" data-delay="3">Registration is free of charge. Fees are payable only as per published government schedules. This is an NMRDA initiative under the Government of Maharashtra.</p>
+
+    <ul class="final-cta__features reveal" data-delay="4">
+      <li>
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><path d="m9 12 2 2 4-4"/></svg>
+        <span>Fully Secure<br>SSL Encrypted</span>
+      </li>
+      <li>
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><rect x="5" y="2" width="14" height="20" rx="2.5"/><path d="M11 18h2"/></svg>
+        <span>Mobile App<br>Available</span>
+      </li>
+      <li>
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 3"/></svg>
+        <span>24/7<br>Online Access</span>
+      </li>
+      <li>
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3a14 14 0 0 1 0 18M12 3a14 14 0 0 0 0 18"/></svg>
+        <span>Multilingual<br>Support</span>
+      </li>
+      <li>
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M3 3v18h18"/><rect x="7" y="11" width="3" height="6"/><rect x="12" y="7" width="3" height="10"/><rect x="17" y="13" width="3" height="4"/></svg>
+        <span>EODB<br>Compliant</span>
+      </li>
+    </ul>
   </div>
 </section>
 
@@ -685,54 +739,92 @@
   <div class="container">
     <div class="footer__grid">
       <div class="footer__brand">
-        <a href="#" class="brand" aria-label="SWCS home">
-          <span class="brand__mark">S</span>
-          <span class="brand__text">
-            <span class="brand__name">SWCS</span>
-            <span class="brand__sub">Naveen Nagpur IBFC</span>
-          </span>
+        <a href="#top" class="footer__logo" aria-label="SWCS — Naveen Nagpur home">
+          <img src="assets/images/naveen-nagpur-logo.png" alt="Naveen Nagpur" width="362" height="335" />
+          <span>Single Window<br>Clearance System</span>
         </a>
-        <p class="footer__about">A Single Window Clearance System built by VIPL for the Nagpur Metropolitan Region Development Authority — making business approvals at the Naveen Nagpur International Business and Finance Hub fast, transparent, and investor-grade.</p>
+        <p class="footer__about">The Single Window Clearance System of the Nagpur Metropolitan Region Development Authority is the official digital platform for submission and processing of applications for business approvals, No Objection Certificates, building permissions, and investor services for the Naveen Nagpur International Business and Finance Centre.</p>
+
+        <ul class="footer__contact">
+          <li>
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/><circle cx="12" cy="10" r="3"/></svg>
+            <span>Station Road, Kingsway, Sadar, Nagpur, Maharashtra &ndash; 440001</span>
+          </li>
+          <li>
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m2 7 10 6 10-6"/></svg>
+            <a href="mailto:swcs@nmrda.org">swcs@nmrda.org</a>
+          </li>
+          <li>
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M2 12h20M12 2a15 15 0 0 1 0 20M12 2a15 15 0 0 0 0 20"/></svg>
+            <a href="https://nmrda.org">nmrda.org</a>
+          </li>
+        </ul>
+
+        <div class="footer__social">
+          <a href="#" aria-label="X" title="X">
+            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
+          </a>
+          <a href="#" aria-label="LinkedIn" title="LinkedIn">
+            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M19 3a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2zM8.34 17V10.21H6.1V17zM7.22 9.06a1.3 1.3 0 1 0 0-2.6 1.3 1.3 0 0 0 0 2.6zM18 17v-3.86c0-2.06-1.1-3.02-2.57-3.02a2.22 2.22 0 0 0-2 1.1V10.2H11.2c.03.63 0 6.8 0 6.8h2.23v-3.79c0-.2.01-.4.07-.54.16-.4.53-.82 1.14-.82.8 0 1.13.61 1.13 1.51V17z"/></svg>
+          </a>
+          <a href="#" aria-label="YouTube" title="YouTube">
+            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M23.5 7.2a3 3 0 0 0-2.11-2.13C19.5 4.55 12 4.55 12 4.55s-7.5 0-9.39.52A3 3 0 0 0 .5 7.2 31.4 31.4 0 0 0 0 12a31.4 31.4 0 0 0 .5 4.8 3 3 0 0 0 2.11 2.13c1.89.52 9.39.52 9.39.52s7.5 0 9.39-.52a3 3 0 0 0 2.11-2.13A31.4 31.4 0 0 0 24 12a31.4 31.4 0 0 0-.5-4.8zM9.6 15.6V8.4l6.25 3.6z"/></svg>
+          </a>
+          <a href="#" aria-label="Facebook" title="Facebook">
+            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M24 12a12 12 0 1 0-13.88 11.85v-8.38H7.08V12h3.04V9.36c0-3 1.79-4.67 4.53-4.67 1.31 0 2.69.24 2.69.24v2.95h-1.51c-1.49 0-1.96.93-1.96 1.87V12h3.33l-.53 3.47h-2.8v8.38A12 12 0 0 0 24 12z"/></svg>
+          </a>
+        </div>
       </div>
 
       <div class="footer__col">
-        <h4>Platform</h4>
+        <h4>Approvals &amp; NOCs</h4>
         <ul>
-          <li><a href="#platform">Modules</a></li>
-          <li><a href="#journeys">Journeys</a></li>
-          <li><a href="#process">How it works</a></li>
-          <li><a href="#audience">Who it's for</a></li>
+          <li><a href="#register">Building Permission</a></li>
+          <li><a href="#register">Environmental Clearance</a></li>
+          <li><a href="#register">Fire Safety NOC</a></li>
+          <li><a href="#register">Electricity Connection</a></li>
+          <li><a href="#register">Water Connection</a></li>
+          <li><a href="#register">Trade License</a></li>
         </ul>
       </div>
 
       <div class="footer__col">
-        <h4>For applicants</h4>
+        <h4>Investor Services</h4>
         <ul>
-          <li><a href="#register">Create account</a></li>
-          <li><a href="#login">Sign in</a></li>
-          <li><a href="#approvals">Approval matrix</a></li>
-          <li><a href="#fees">Fees &amp; timelines</a></li>
+          <li><a href="#register">Register Business</a></li>
+          <li><a href="#infrastructure">Land Allotment</a></li>
+          <li><a href="#about">Investment Policy</a></li>
+          <li><a href="#register">Incentives &amp; Subsidies</a></li>
+          <li><a href="#infrastructure">GIS Land Bank</a></li>
+          <li><a href="#register">SBID (Single Business ID)</a></li>
         </ul>
       </div>
 
       <div class="footer__col">
-        <h4>NMRDA</h4>
+        <h4>Quick Links</h4>
         <ul>
-          <li><a href="#scale">The Hub</a></li>
-          <li><a href="#contact">Contact</a></li>
-          <li><a href="#press">Press</a></li>
-          <li><a href="#grievance">Grievance redressal</a></li>
+          <li><a href="#">MahaTenders Portal</a></li>
+          <li><a href="#">MAITRI Act</a></li>
+          <li><a href="#">DPIIT Startup India</a></li>
+          <li><a href="#help-desk">Grievance Redressal</a></li>
+          <li><a href="#">RTI Applications</a></li>
+          <li><a href="#">Accessibility Statement</a></li>
+          <li><a href="https://www.india.gov.in" class="footer__ext">National Portal of India
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17 17 7M7 7h10v10"/></svg>
+          </a></li>
         </ul>
       </div>
     </div>
 
     <div class="footer__bottom">
-      <span>© 2026 Nagpur Metropolitan Region Development Authority. Built by VIPL.</span>
+      <span>&copy; 2026 Nagpur Metropolitan Region Development Authority. All rights reserved.</span>
       <span class="legal">
-        <a href="#privacy">Privacy</a>
-        <a href="#terms">Terms</a>
+        <a href="#privacy">Privacy Policy</a>
+        <a href="#terms">Terms of Use</a>
+        <a href="#disclaimer">Disclaimer</a>
+        <a href="#sitemap">Sitemap</a>
         <a href="#accessibility">Accessibility</a>
-        <a href="#security">Security</a>
+        <a href="#feedback">Feedback</a>
       </span>
     </div>
   </div>

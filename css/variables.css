@@ -26,10 +26,10 @@
   --info: #3a6ea5;
   --warning: #b87333;
 
-  /* Typography */
-  --font-display: 'Instrument Serif', 'Cormorant Garamond', Georgia, serif;
-  --font-sans: 'Inter', system-ui, -apple-system, 'Helvetica Neue', sans-serif;
-  --font-mono: 'JetBrains Mono', ui-monospace, 'SF Mono', monospace;
+  /* Two-font system — Lora (subtle serif) for headings, Roboto for body & labels */
+  --font-display: 'Lora', Georgia, 'Times New Roman', serif;
+  --font-sans: 'Roboto', system-ui, -apple-system, 'Helvetica Neue', sans-serif;
+  --font-mono: 'Roboto', system-ui, -apple-system, sans-serif;
 
   /* Type scale — fluid */
   --fs-xs: 0.75rem;

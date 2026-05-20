@@ -24,14 +24,6 @@
   padding: var(--s-8);
   display: flex; flex-direction: column;
   min-height: 280px;
-  transition: transform var(--dur-base) var(--ease-settle),
-              box-shadow var(--dur-base) var(--ease-settle),
-              border-color var(--dur-base) var(--ease-settle);
-}
-.help-card:hover {
-  transform: translateY(-3px);
-  box-shadow: var(--shadow-md);
-  border-color: var(--ink-12);
 }
 
 .help-card__icon {

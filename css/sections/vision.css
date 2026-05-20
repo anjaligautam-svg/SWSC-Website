@@ -41,14 +41,6 @@
   display: flex;
   flex-direction: column;
   gap: var(--s-4);
-  transition: transform var(--dur-base) var(--ease-settle),
-              box-shadow var(--dur-base) var(--ease-settle),
-              border-color var(--dur-base) var(--ease-settle);
-}
-.vision-card:hover {
-  transform: translateY(-3px);
-  box-shadow: var(--shadow-md);
-  border-color: var(--ink-12);
 }
 
 .vision-card__head {

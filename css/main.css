@@ -14,9 +14,9 @@ body {
 
 h1, h2, h3, h4 {
   font-family: var(--font-display);
-  font-weight: 400;
-  line-height: 1.02;
-  letter-spacing: -0.015em;
+  font-weight: 600;
+  line-height: 1.14;
+  letter-spacing: -0.012em;
   color: var(--ink);
 }
 
@@ -143,6 +143,45 @@ a:focus-visible, button:focus-visible {
 
 /* Hairline divider */
 .hairline { height: 1px; background: var(--rule); border: 0; }
+
+/* ============================================================
+   Unified card system — one drop-shadow + hover behaviour for
+   every card on the page, big or small. Section files own each
+   card's layout (padding, radius, background); this owns depth.
+   ============================================================ */
+.card,
+.vision-card,
+.ibfc-stat,
+.net-card,
+.help-card,
+.t-card__inner {
+  box-shadow: var(--shadow-md);
+  transition: transform var(--dur-base) var(--ease-settle),
+              box-shadow var(--dur-base) var(--ease-settle),
+              border-color var(--dur-base) var(--ease-settle);
+}
+.card:hover,
+.vision-card:hover,
+.ibfc-stat:hover,
+.net-card:hover,
+.help-card:hover,
+.t-card__inner:hover {
+  transform: translateY(-6px);
+  box-shadow: var(--shadow-lg);
+  border-color: var(--ink-12);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .card, .vision-card, .ibfc-stat, .net-card,
+  .help-card, .t-card__inner {
+    transition: box-shadow var(--dur-base) var(--ease-ui),
+                border-color var(--dur-base) var(--ease-ui);
+  }
+  .card:hover, .vision-card:hover, .ibfc-stat:hover, .net-card:hover,
+  .help-card:hover, .t-card__inner:hover {
+    transform: none;
+  }
+}
 
 /* Reveal animations — settled */
 .reveal { opacity: 0; transform: translateY(20px); transition: opacity var(--dur-reveal) var(--ease-settle), transform var(--dur-reveal) var(--ease-settle); }

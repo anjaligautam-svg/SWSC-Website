@@ -1,0 +1,134 @@
+/* Leadership testimonials — centered header + 4 quote cards.
+   Ports the bento-monochrome "animation": a blur-up staggered card
+   entrance + a cursor-following radial glow on hover.
+   Outer .t-card runs the entrance; inner card runs hover + glow,
+   so the two never fight over `transform`. */
+
+#leadership { scroll-margin-top: 90px; }
+
+.t-head {
+  text-align: center;
+  max-width: 760px;
+  margin: 0 auto clamp(40px, 5vw, 64px);
+}
+.t-head .eyebrow {
+  justify-content: center;
+  color: var(--ink);
+  margin-bottom: var(--s-3);
+}
+.t-head .eyebrow::before { display: none; }
+.t-head h2 {
+  font-size: var(--fs-2xl);
+  letter-spacing: -0.02em;
+  line-height: 1.12;
+}
+.t-head h2 em { font-style: italic; color: var(--flame); }
+.t-head p {
+  margin-top: var(--s-4);
+  font-size: var(--fs-md);
+  color: var(--ink-70);
+  max-width: 64ch;
+  margin-inline: auto;
+  line-height: 1.6;
+}
+
+.leadership__grid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: var(--s-5);
+}
+
+/* ---- Outer wrapper: blur-up entrance only ---- */
+.t-card { display: flex; }
+.t-card.reveal {
+  transform: translateY(28px) scale(0.97);
+  filter: blur(12px);
+  transition: opacity var(--dur-reveal) var(--ease-settle),
+              transform var(--dur-reveal) var(--ease-settle),
+              filter var(--dur-reveal) var(--ease-settle);
+}
+.t-card.reveal.is-in {
+  transform: translateY(0) scale(1);
+  filter: blur(0);
+}
+
+/* ---- Inner card: surface, hover lift + cursor glow ---- */
+.t-card__inner {
+  position: relative;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  padding: clamp(24px, 2.4vw, 32px);
+  background: var(--card);
+  border: 1px solid var(--rule);
+  border-radius: var(--r-lg);
+  overflow: hidden;
+}
+
+/* cursor-following glow */
+.t-card__glow {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  opacity: 0;
+  transition: opacity var(--dur-base) var(--ease-ui);
+  background: radial-gradient(220px circle at var(--tx, 50%) var(--ty, 50%),
+              rgba(235, 71, 12, 0.10), transparent 70%);
+}
+.t-card__inner:hover .t-card__glow { opacity: 1; }
+
+.t-card__quote {
+  color: var(--flame);
+  opacity: 0.5;
+  margin-bottom: var(--s-3);
+}
+.t-card__quote svg { width: 32px; height: 32px; }
+
+.t-card__text {
+  font-family: var(--font-sans);
+  font-style: italic;
+  font-size: 0.9375rem;
+  line-height: 1.62;
+  color: var(--ink-70);
+  flex: 1;
+}
+
+.t-card__rule {
+  height: 1px;
+  border: 0;
+  background: var(--rule);
+  margin: var(--s-5) 0 var(--s-4);
+}
+
+.t-card__name {
+  font-family: var(--font-display);
+  font-size: 1.0625rem;
+  font-weight: 600;
+  letter-spacing: -0.01em;
+  color: var(--ink);
+}
+.t-card__role {
+  font-size: 0.8125rem;
+  color: var(--ink-50);
+  margin-top: 2px;
+}
+.t-card__org {
+  margin-top: var(--s-3);
+  font-family: var(--font-sans);
+  font-size: 0.6875rem;
+  font-weight: 600;
+  letter-spacing: 0.09em;
+  text-transform: uppercase;
+  color: var(--flame);
+}
+
+@media (max-width: 1000px) {
+  .leadership__grid { grid-template-columns: 1fr 1fr; }
+}
+@media (max-width: 560px) {
+  .leadership__grid { grid-template-columns: 1fr; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .t-card.reveal { filter: none; transform: none; }
+}
