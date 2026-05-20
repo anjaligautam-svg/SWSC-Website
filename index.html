@@ -63,37 +63,59 @@
   <div class="container">
     <div class="hero__stage">
 
-      <!-- LEFT: image gallery -->
+      <!-- RIGHT: photo slider -->
       <div class="hero__gallery-wrap reveal">
-        <div class="hero__gallery" data-hero-gallery role="region" aria-label="Naveen Nagpur in motion">
-          <div class="gallery-item">
-            <img src="assets/images/hero/hero-c.jpg" alt="Analyst at a multi-monitor workstation" loading="lazy" />
-            <div class="gallery-item__caption"><span class="num">01 · IT &amp; ITeS</span><span class="lbl">Decisions, in real time.</span></div>
-          </div>
-          <div class="gallery-item">
-            <img src="assets/images/hero/hero-a.jpg" alt="Indian manufacturing plant — Make in India" loading="lazy" />
-            <div class="gallery-item__caption"><span class="num">02 · MANUFACTURING</span><span class="lbl">Made in India, by design.</span></div>
-          </div>
-          <div class="gallery-item is-active">
+        <div class="hero__slider" data-hero-slider role="region" aria-label="Naveen Nagpur photo slider">
+
+          <div class="hero__slide is-active">
             <img src="assets/images/hero/hero-e.jpg" alt="Naveen Nagpur master rendering — central avenue with greenery and high-rises" loading="eager" />
-            <div class="gallery-item__caption"><span class="num">03 · THE VISION</span><span class="lbl">Naveen Nagpur, on plan.</span></div>
+            <div class="hero__slide-caption">
+              <span class="hero__slide-text">The Naveen Nagpur Masterplan</span>
+              <span class="hero__slide-sub">A 692-hectare greenfield International Business &amp; Finance Centre.</span>
+            </div>
           </div>
-          <div class="gallery-item">
+
+          <div class="hero__slide">
             <img src="assets/images/hero/hero-b.jpg" alt="Financial district skyline at sunrise" loading="lazy" />
-            <div class="gallery-item__caption"><span class="num">04 · FINANCE</span><span class="lbl">A financial district at dawn.</span></div>
+            <div class="hero__slide-caption">
+              <span class="hero__slide-text">International Finance District</span>
+              <span class="hero__slide-sub">Dedicated zones for banks, institutions, and global capability centres.</span>
+            </div>
           </div>
-          <div class="gallery-item">
+
+          <div class="hero__slide">
+            <img src="assets/images/hero/hero-c.jpg" alt="Analyst at a multi-monitor workstation" loading="lazy" />
+            <div class="hero__slide-caption">
+              <span class="hero__slide-text">IT &amp; ITeS Campuses</span>
+              <span class="hero__slide-sub">Plug-and-play space for technology firms and back-office operations.</span>
+            </div>
+          </div>
+
+          <div class="hero__slide">
+            <img src="assets/images/hero/hero-a.jpg" alt="Indian manufacturing plant — Make in India" loading="lazy" />
+            <div class="hero__slide-caption">
+              <span class="hero__slide-text">Manufacturing &amp; Enterprise</span>
+              <span class="hero__slide-sub">Industry-ready plots with dedicated power, water, and logistics.</span>
+            </div>
+          </div>
+
+          <div class="hero__slide">
             <img src="assets/images/hero/hero-d.jpg" alt="Team collaborating in a modern Indian office" loading="lazy" />
-            <div class="gallery-item__caption"><span class="num">05 · ENTERPRISE</span><span class="lbl">Built for working teams.</span></div>
+            <div class="hero__slide-caption">
+              <span class="hero__slide-text">A Live-Work Community</span>
+              <span class="hero__slide-sub">Residential, retail, and social infrastructure, master-planned.</span>
+            </div>
           </div>
+
         </div>
 
-        <a href="#vision" class="hero__scroll" aria-label="Scroll to the next section">
-          <span class="hero__scroll-mouse" aria-hidden="true">
-            <span class="hero__scroll-wheel"></span>
-          </span>
-          <span class="hero__scroll-label">Scroll</span>
-        </a>
+        <div class="hero__progress" data-hero-progress>
+          <button class="hero__progress-seg" type="button" aria-label="Show slide 1"><span class="hero__progress-fill"></span></button>
+          <button class="hero__progress-seg" type="button" aria-label="Show slide 2"><span class="hero__progress-fill"></span></button>
+          <button class="hero__progress-seg" type="button" aria-label="Show slide 3"><span class="hero__progress-fill"></span></button>
+          <button class="hero__progress-seg" type="button" aria-label="Show slide 4"><span class="hero__progress-fill"></span></button>
+          <button class="hero__progress-seg" type="button" aria-label="Show slide 5"><span class="hero__progress-fill"></span></button>
+        </div>
       </div>
 
       <!-- RIGHT: hero copy -->

@@ -1,5 +1,4 @@
-/* Hero — two adjacent columns: image gallery LEFT, text copy RIGHT.
-   No overlap, no glass container — the copy sits directly on the page. */
+/* Hero — two adjacent columns: text copy LEFT, photo slider RIGHT. */
 
 .hero {
   position: relative;
@@ -23,174 +22,7 @@
 }
 
 /* ============================================================
-   LEFT — image gallery
-   ============================================================ */
-.hero__gallery-wrap {
-  position: relative;
-  order: 2;
-  height: clamp(480px, 68vh, 680px);
-  border-radius: var(--r-xl);
-  overflow: hidden;
-  isolation: isolate;
-  box-shadow: var(--shadow-md);
-}
-
-.hero__gallery {
-  display: flex;
-  gap: 6px;
-  height: 100%;
-  width: 100%;
-}
-
-.gallery-item {
-  position: relative;
-  flex: 1;
-  min-width: 0;
-  height: 100%;
-  border-radius: var(--r-lg);
-  overflow: hidden;
-  cursor: pointer;
-  transition: flex var(--dur-slow) var(--ease-settle);
-}
-.gallery-item img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  object-position: center;
-  transition: transform var(--dur-slow) var(--ease-settle),
-              filter var(--dur-base) var(--ease-ui);
-  filter: saturate(0.95) brightness(0.94);
-}
-.gallery-item__caption {
-  position: absolute;
-  left: var(--s-5);
-  top: var(--s-5);
-  right: var(--s-5);
-  display: flex; flex-direction: column;
-  gap: 4px;
-  opacity: 0;
-  transform: translateY(-8px);
-  transition: opacity var(--dur-base) var(--ease-settle),
-              transform var(--dur-base) var(--ease-settle);
-  pointer-events: none;
-  color: #fff;
-  text-shadow: 0 2px 12px rgba(0, 0, 0, 0.55);
-  z-index: 2;
-}
-.gallery-item__caption .num {
-  font-family: var(--font-mono);
-  font-size: 0.6875rem;
-  letter-spacing: 0.16em;
-  opacity: 0.85;
-}
-.gallery-item__caption .lbl {
-  font-family: var(--font-display);
-  font-size: 1.5rem;
-  line-height: 1.05;
-  letter-spacing: -0.01em;
-}
-
-.gallery-item::after {
-  content: "";
-  position: absolute;
-  inset: 0 0 50% 0;
-  background: linear-gradient(to top, transparent, rgba(0, 0, 0, 0.55));
-  opacity: 0;
-  transition: opacity var(--dur-base) var(--ease-ui);
-  pointer-events: none;
-}
-
-.gallery-item.is-active,
-.gallery-item:hover {
-  flex: 5;
-}
-.gallery-item.is-active img,
-.gallery-item:hover img {
-  filter: saturate(1.08) brightness(1);
-  transform: scale(1.03);
-}
-.gallery-item.is-active::after,
-.gallery-item:hover::after {
-  opacity: 1;
-}
-.gallery-item.is-active .gallery-item__caption,
-.gallery-item:hover .gallery-item__caption {
-  opacity: 1;
-  transform: translateY(0);
-}
-
-.hero__gallery:hover .gallery-item.is-active:not(:hover) .gallery-item__caption {
-  opacity: 0;
-  transform: translateY(-8px);
-}
-.hero__gallery:hover .gallery-item.is-active:not(:hover) { flex: 0.8; }
-.hero__gallery:hover .gallery-item.is-active:not(:hover) img { filter: saturate(0.95) brightness(0.94); transform: none; }
-.hero__gallery:hover .gallery-item.is-active:not(:hover)::after { opacity: 0; }
-.hero__gallery:hover .gallery-item:not(:hover) { flex: 0.8; }
-
-/* ============================================================
-   Scroll cue — mouse silhouette with an animated wheel
-   ============================================================ */
-.hero__scroll {
-  position: absolute;
-  z-index: 6;
-  bottom: clamp(16px, 2vh, 28px);
-  left: 50%;
-  transform: translateX(-50%);
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 10px;
-  text-decoration: none;
-  color: #fff;
-  font-family: var(--font-sans);
-  font-size: 0.6875rem;
-  letter-spacing: 0.24em;
-  text-transform: uppercase;
-  font-weight: 500;
-  opacity: 0.95;
-  transition: opacity var(--dur-base) var(--ease-ui),
-              transform var(--dur-base) var(--ease-ui);
-  text-shadow: 0 1px 8px rgba(0, 0, 0, 0.55);
-  padding: 6px 10px;
-  pointer-events: auto;
-}
-.hero__scroll:hover {
-  opacity: 1;
-  transform: translateX(-50%) translateY(-2px);
-}
-.hero__scroll:focus-visible {
-  outline: 2px solid var(--flame);
-  outline-offset: 6px;
-  border-radius: 4px;
-}
-
-.hero__scroll-mouse {
-  position: relative;
-  width: 26px;
-  height: 42px;
-  border: 2px solid currentColor;
-  border-radius: 14px;
-  display: flex;
-  justify-content: center;
-  padding-top: 7px;
-  filter: drop-shadow(0 1px 6px rgba(0, 0, 0, 0.4));
-}
-.hero__scroll-wheel {
-  width: 3px;
-  height: 8px;
-  border-radius: 2px;
-  background: currentColor;
-  animation: heroScrollWheel 1.8s cubic-bezier(0.4, 0, 0.2, 1) infinite;
-}
-@keyframes heroScrollWheel {
-  0%   { transform: translateY(0);    opacity: 1; }
-  60%  { transform: translateY(14px); opacity: 0; }
-  100% { transform: translateY(0);    opacity: 1; }
-}
-
-/* ============================================================
-   RIGHT — hero copy (no container, text sits on the page)
+   LEFT — hero copy
    ============================================================ */
 .hero__copy {
   order: 1;
@@ -232,6 +64,134 @@
 }
 
 /* ============================================================
+   RIGHT — photo slider
+   ============================================================ */
+.hero__gallery-wrap {
+  order: 2;
+  position: relative;
+  height: clamp(480px, 68vh, 680px);
+  border-radius: var(--r-xl);
+  overflow: hidden;
+  isolation: isolate;
+  box-shadow: var(--shadow-md);
+  background: var(--ink);
+}
+
+.hero__slider { position: absolute; inset: 0; }
+
+/* one landscape image per slide — crossfade between them */
+.hero__slide {
+  position: absolute;
+  inset: 0;
+  opacity: 0;
+  transition: opacity 900ms var(--ease-settle);
+}
+.hero__slide.is-active {
+  opacity: 1;
+  z-index: 1;
+}
+.hero__slide img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+/* gentle slow zoom while a slide is showing */
+.hero__slide.is-active img {
+  animation: heroKenBurns 7s ease-out forwards;
+}
+@keyframes heroKenBurns {
+  from { transform: scale(1); }
+  to   { transform: scale(1.08); }
+}
+.hero__slide::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to top,
+    rgba(5, 12, 54, 0.86) 4%,
+    rgba(5, 12, 54, 0.32) 34%,
+    transparent 58%);
+  pointer-events: none;
+}
+
+/* caption — text + subtext */
+.hero__slide-caption {
+  position: absolute;
+  z-index: 2;
+  left: clamp(24px, 3vw, 40px);
+  right: clamp(24px, 3vw, 40px);
+  bottom: clamp(40px, 5vw, 60px);
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  color: #fff;
+}
+.hero__slide-text {
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: clamp(1.5rem, 1.1rem + 1.3vw, 2.125rem);
+  line-height: 1.12;
+  letter-spacing: -0.01em;
+}
+.hero__slide-sub {
+  font-family: var(--font-sans);
+  font-size: 0.9375rem;
+  line-height: 1.5;
+  color: rgba(255, 255, 255, 0.82);
+  max-width: 54ch;
+}
+
+/* minimal segmented progress bar */
+.hero__progress {
+  position: absolute;
+  z-index: 3;
+  left: clamp(24px, 3vw, 40px);
+  right: clamp(24px, 3vw, 40px);
+  bottom: clamp(16px, 2vw, 22px);
+  display: flex;
+  gap: 8px;
+}
+.hero__progress-seg {
+  flex: 1;
+  height: 3px;
+  padding: 0;
+  border: 0;
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.26);
+  position: relative;
+  overflow: hidden;
+  cursor: pointer;
+}
+.hero__progress-fill {
+  position: absolute;
+  inset: 0;
+  width: 0;
+  background: #fff;
+  border-radius: 999px;
+}
+.hero__progress-seg.is-done .hero__progress-fill { width: 100%; }
+/* the active segment fills over the autoplay interval —
+   keep this duration in sync with INTERVAL in hero-gallery.js */
+.hero__progress-seg.is-active .hero__progress-fill {
+  animation: heroProgress 5s linear forwards;
+}
+@keyframes heroProgress {
+  from { width: 0; }
+  to   { width: 100%; }
+}
+.hero__progress-seg:focus-visible {
+  outline: 2px solid #fff;
+  outline-offset: 3px;
+}
+
+/* hover pauses autoplay + the fill + the zoom */
+.hero__slider.is-paused .hero__progress-seg.is-active .hero__progress-fill,
+.hero__slider.is-paused .hero__slide.is-active img {
+  animation-play-state: paused;
+}
+
+/* ============================================================
    Responsive
    ============================================================ */
 @media (max-width: 900px) {
@@ -243,6 +203,7 @@
 }
 
 @media (prefers-reduced-motion: reduce) {
-  .gallery-item, .gallery-item img { transition: none !important; }
-  .hero__scroll-wheel { animation: none; }
+  .hero__slide { transition: none; }
+  .hero__slide.is-active img { animation: none; }
+  .hero__progress-seg.is-active .hero__progress-fill { animation: none; width: 100%; }
 }
