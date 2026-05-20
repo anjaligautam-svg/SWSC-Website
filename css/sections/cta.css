@@ -29,7 +29,7 @@
   letter-spacing: -0.02em;
   color: var(--ink);
 }
-.final-cta h2 em { font-style: italic; color: var(--flame); }
+.final-cta h2 em { font-style: normal; color: var(--flame); }
 
 .final-cta__lede {
   margin: var(--s-5) auto 0;

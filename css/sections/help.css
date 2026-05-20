@@ -8,7 +8,7 @@
   margin-bottom: clamp(48px, 6vw, 72px);
 }
 .help__head h2 { font-size: var(--fs-2xl); max-width: 14ch; }
-.help__head h2 em { font-style: italic; color: var(--flame); }
+.help__head h2 em { font-style: normal; color: var(--flame); }
 .help__head p { font-size: var(--fs-md); color: var(--ink-70); max-width: 52ch; }
 
 .help__grid {

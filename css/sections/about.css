@@ -186,7 +186,7 @@
   line-height: 1.14;
   max-width: 20ch;
 }
-.ibfc-content h2 em { font-style: italic; color: var(--flame); }
+.ibfc-content h2 em { font-style: normal; color: var(--flame); }
 .ibfc-content__body > p {
   margin-top: var(--s-4);
   font-size: 0.9375rem;

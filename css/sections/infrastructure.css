@@ -39,7 +39,7 @@
   letter-spacing: -0.02em;
   line-height: 1.12;
 }
-.infra__head h2 em { font-style: italic; color: var(--flame); }
+.infra__head h2 em { font-style: normal; color: var(--flame); }
 .infra__head p {
   margin-top: var(--s-4);
   font-size: var(--fs-md);

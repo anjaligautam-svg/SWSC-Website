@@ -22,7 +22,7 @@
   letter-spacing: -0.02em;
   line-height: 1.12;
 }
-.t-head h2 em { font-style: italic; color: var(--flame); }
+.t-head h2 em { font-style: normal; color: var(--flame); }
 .t-head p {
   margin-top: var(--s-4);
   font-size: var(--fs-md);

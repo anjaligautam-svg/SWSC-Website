@@ -17,7 +17,7 @@
   letter-spacing: -0.02em;
   line-height: 1;
 }
-.vision__intro h2 em { font-style: italic; color: var(--flame); }
+.vision__intro h2 em { font-style: normal; color: var(--flame); }
 .vision__intro p {
   margin-top: var(--s-6);
   font-size: var(--fs-md);
@@ -67,7 +67,7 @@
   line-height: 1.02;
   color: var(--ink);
 }
-.vision-card h3 em { font-style: italic; color: var(--flame); }
+.vision-card h3 em { font-style: normal; color: var(--flame); }
 
 .vision-card p {
   font-size: 0.9375rem;
