@@ -2,6 +2,8 @@
    LEFT: eyebrow + headline + lede.
    RIGHT: two stacked cards (Our Vision, Our Mission) with flame-tint icon chips. */
 
+#vision { scroll-margin-top: 116px; }
+
 .vision__grid {
   display: grid;
   grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);

@@ -2,7 +2,7 @@
 
 .hero {
   position: relative;
-  padding: clamp(108px, 12vw, 152px) 0 clamp(48px, 6vw, 80px);
+  padding: clamp(148px, 13vw, 188px) 0 clamp(48px, 6vw, 80px);
   background:
     radial-gradient(1100px 600px at 90% -10%, rgba(235, 71, 12, 0.05), transparent 60%),
     radial-gradient(900px 700px at -10% 30%, rgba(5, 12, 54, 0.04), transparent 65%),

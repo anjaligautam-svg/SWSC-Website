@@ -33,9 +33,8 @@
   text-decoration: none;
 }
 .footer__logo img {
-  width: 54px;
-  height: 54px;
-  object-fit: contain;
+  height: 52px;
+  width: auto;
   flex-shrink: 0;
 }
 .footer__logo span {

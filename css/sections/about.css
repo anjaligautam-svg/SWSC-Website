@@ -3,7 +3,7 @@
    draggable, snap-scrolling, arrows + dot pagination, hover-zoom. */
 
 #about {
-  scroll-margin-top: 90px;
+  scroll-margin-top: 116px;
   padding-block: clamp(44px, 5vw, 76px);
 }
 
@@ -181,10 +181,10 @@
    ============================================================ */
 .ibfc-content .eyebrow { margin-bottom: var(--s-3); }
 .ibfc-content h2 {
-  font-size: clamp(1.625rem, 1.2rem + 1.5vw, 2.375rem);
-  letter-spacing: -0.018em;
-  line-height: 1.14;
-  max-width: 20ch;
+  font-size: var(--fs-2xl);
+  letter-spacing: -0.02em;
+  line-height: 1.12;
+  max-width: 18ch;
 }
 .ibfc-content h2 em { font-style: normal; color: var(--flame); }
 .ibfc-content__body > p {

@@ -3,7 +3,7 @@
    Glassmorphism on dark, single flame accent for all icons.
    Animation: staggered scroll-reveal + hover lift. */
 
-#infrastructure { scroll-margin-top: 90px; }
+#infrastructure { scroll-margin-top: 116px; }
 
 .infra {
   position: relative;
@@ -28,11 +28,10 @@
   margin: 0 auto clamp(40px, 5vw, 64px);
 }
 .infra__head .eyebrow {
-  justify-content: center;
-  color: rgba(255, 255, 255, 0.62);
-  margin-bottom: var(--s-3);
+  color: rgba(255, 255, 255, 0.7);
+  margin-bottom: var(--s-4);
 }
-.infra__head .eyebrow::before { display: none; }
+.infra__head .eyebrow::before { background: rgba(255, 255, 255, 0.4); }
 .infra__head h2 {
   font-size: var(--fs-2xl);
   color: #fff;

@@ -1,0 +1,141 @@
+/* Accessibility bar — Government of India style toolbar.
+   Fixed at the very top; the nav sits directly beneath it. */
+
+.a11y-bar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 60;
+  height: 40px;
+  background: var(--ink);
+  color: rgba(255, 255, 255, 0.78);
+  font-family: var(--font-sans);
+  font-size: 0.8125rem;
+}
+.a11y-bar__inner {
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--s-4);
+}
+
+/* ---- Left: Government of India ---- */
+.a11y-bar__gov {
+  display: inline-flex;
+  align-items: center;
+  gap: 9px;
+  font-weight: 500;
+  color: rgba(255, 255, 255, 0.9);
+  white-space: nowrap;
+}
+.a11y-bar__flag {
+  display: block;
+  width: 22px;
+  height: 15px;
+  border-radius: 2px;
+  overflow: hidden;
+  flex-shrink: 0;
+  box-shadow: 0 0 0 1px rgba(255, 255, 255, 0.18);
+}
+.a11y-bar__flag svg { display: block; width: 100%; height: 100%; }
+
+/* ---- Right: tools ---- */
+.a11y-bar__tools {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+.a11y-bar__label {
+  color: rgba(255, 255, 255, 0.52);
+  white-space: nowrap;
+}
+.a11y-bar__divider {
+  width: 1px;
+  height: 16px;
+  background: rgba(255, 255, 255, 0.20);
+}
+
+/* boxed text-size buttons */
+.a11y-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 26px;
+  height: 24px;
+  padding: 0 7px;
+  background: rgba(255, 255, 255, 0.08);
+  border: 1px solid rgba(255, 255, 255, 0.22);
+  border-radius: var(--r-sm);
+  color: #fff;
+  font-family: var(--font-sans);
+  font-weight: 500;
+  line-height: 1;
+  cursor: pointer;
+  transition: background var(--dur-fast) var(--ease-ui);
+}
+.a11y-btn:hover { background: rgba(255, 255, 255, 0.22); }
+.a11y-btn:focus-visible { outline: 2px solid var(--flame); outline-offset: 2px; }
+.a11y-btn--sm { font-size: 0.6875rem; }
+.a11y-btn--md { font-size: 0.8125rem; background: rgba(255, 255, 255, 0.18); }
+.a11y-btn--lg { font-size: 0.9375rem; }
+
+/* text links — High Contrast, Screen Reader */
+.a11y-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  background: none;
+  border: 0;
+  padding: 0;
+  color: rgba(255, 255, 255, 0.85);
+  font-family: var(--font-sans);
+  font-size: 0.8125rem;
+  cursor: pointer;
+  white-space: nowrap;
+  transition: color var(--dur-fast) var(--ease-ui);
+}
+.a11y-link:hover { color: var(--flame); }
+.a11y-link:focus-visible { outline: 2px solid var(--flame); outline-offset: 2px; }
+.a11y-link svg { width: 15px; height: 15px; }
+.a11y-link[aria-pressed="true"] { color: var(--flame); }
+
+/* ---- Skip link — visible only on keyboard focus ---- */
+.skip-link {
+  position: fixed;
+  top: 8px;
+  left: 8px;
+  z-index: 80;
+  background: var(--flame);
+  color: #fff;
+  padding: 8px 16px;
+  border-radius: var(--r-sm);
+  font-family: var(--font-sans);
+  font-size: 0.875rem;
+  font-weight: 600;
+  text-decoration: none;
+  transform: translateY(-150%);
+  transition: transform var(--dur-base) var(--ease-ui);
+}
+.skip-link:focus { transform: translateY(0); }
+
+@media (max-width: 720px) {
+  .a11y-bar__label { display: none; }
+  .a11y-bar__gov span { font-size: 0.75rem; }
+}
+@media (max-width: 520px) {
+  .a11y-bar { font-size: 0.75rem; }
+  .a11y-bar__tools { gap: 6px; }
+}
+
+/* ============================================================
+   High-contrast mode (toggled from the bar)
+   ============================================================ */
+html.a11y-contrast {
+  --ink-70: var(--ink);
+  --ink-50: var(--ink);
+  --ink-30: rgba(5, 12, 54, 0.55);
+  --rule: rgba(5, 12, 54, 0.42);
+  --rule-strong: rgba(5, 12, 54, 0.62);
+}

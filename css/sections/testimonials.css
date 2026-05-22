@@ -4,19 +4,14 @@
    Outer .t-card runs the entrance; inner card runs hover + glow,
    so the two never fight over `transform`. */
 
-#leadership { scroll-margin-top: 90px; }
+#leadership { scroll-margin-top: 116px; }
 
 .t-head {
   text-align: center;
   max-width: 760px;
   margin: 0 auto clamp(40px, 5vw, 64px);
 }
-.t-head .eyebrow {
-  justify-content: center;
-  color: var(--ink);
-  margin-bottom: var(--s-3);
-}
-.t-head .eyebrow::before { display: none; }
+.t-head .eyebrow { margin-bottom: var(--s-4); }
 .t-head h2 {
   font-size: var(--fs-2xl);
   letter-spacing: -0.02em;

@@ -2,7 +2,7 @@
 
 .nav {
   position: fixed;
-  inset: 0 0 auto 0;
+  inset: 40px 0 auto 0;
   z-index: 50;
   padding: var(--s-3) 0;
   background: #ffffff;
